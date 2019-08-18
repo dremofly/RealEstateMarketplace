@@ -1166,7 +1166,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-18T07:07:10.343Z",
+  "updatedAt": "2019-08-18T13:12:19.517Z",
   "devdoc": {
     "details": "Extension of RefundableCrowdsale contract that only delivers the tokens once the crowdsale has closed and the goal met, preventing refunds to be issued to token holders.",
     "methods": {

@@ -29379,7 +29379,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-18T07:07:08.193Z",
+  "updatedAt": "2019-08-18T13:11:08.200Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {

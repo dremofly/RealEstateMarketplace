@@ -3490,7 +3490,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-18T07:07:08.189Z",
+  "updatedAt": "2019-08-18T13:12:19.932Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {
