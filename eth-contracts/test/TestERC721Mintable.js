@@ -50,11 +50,17 @@ contract('TestERC721Mintable', accounts => {
         })
 
         it('should fail when minting when address is not contract owner', async function () { 
-            
+            try {
+                await this.contract.mint(account_one, 0, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/", {from: account_two});
+            }
+            catch(err) {
+                console.log("error");
+            }
         })
 
         it('should return contract owner', async function () { 
-            
+            let owner = await this.contract.contractOwner.call();
+            console.log(owner);
         })
 
     });

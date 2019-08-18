@@ -24,6 +24,10 @@ contract Ownable {
         require(msg.sender == _owner);
         _;
     }
+
+    function contractOwner() public view returns(address) {
+        return _owner;
+    }
     
     function transferOwnership(address newOwner) public onlyOwner {
         // TODO add functionality to transfer control of the contract to a newOwner.
@@ -555,6 +559,10 @@ contract HongToken is ERC721Metadata("Hong", "HC", "https://s3-us-west-2.amazona
         super.setTokenURI(tokenId);
         return true;
     }
+
+    //function transferFrom(address from, address to, uint256 tokenId) public{
+     //   super._transferFrom(from, to, tokenId);
+    //}
 }
 
 

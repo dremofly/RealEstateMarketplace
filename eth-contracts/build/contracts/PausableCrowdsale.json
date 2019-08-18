@@ -232,19 +232,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\n\nimport \"../Crowdsale.sol\";\nimport \"../../lifecycle/Pausable.sol\";\n\n/**\n * @title PausableCrowdsale\n * @dev Extension of Crowdsale contract where purchases can be paused and unpaused by the pauser role.\n */\ncontract PausableCrowdsale is Crowdsale, Pausable {\n    /**\n     * @dev Validation of an incoming purchase. Use require statements to revert state when conditions are not met.\n     * Use super to concatenate validations.\n     * Adds the validation that the crowdsale must not be paused.\n     * @param _beneficiary Address performing the token purchase\n     * @param _weiAmount Value in wei involved in the purchase\n     */\n    function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal view whenNotPaused {\n        return super._preValidatePurchase(_beneficiary, _weiAmount);\n    }\n}\n",
-  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
+  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
   "ast": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
     "exportedSymbols": {
       "PausableCrowdsale": [
-        9247
+        11814
       ]
     },
-    "id": 9248,
+    "id": 11815,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9224,
+        "id": 11791,
         "literals": [
           "solidity",
           "^",
@@ -252,27 +252,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:21"
+        "src": "0:23:22"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 9225,
+        "id": 11792,
         "nodeType": "ImportDirective",
-        "scope": 9248,
-        "sourceUnit": 8433,
-        "src": "25:26:21",
+        "scope": 11815,
+        "sourceUnit": 11000,
+        "src": "25:26:22",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
         "file": "../../lifecycle/Pausable.sol",
-        "id": 9226,
+        "id": 11793,
         "nodeType": "ImportDirective",
-        "scope": 9248,
-        "sourceUnit": 11373,
-        "src": "52:38:21",
+        "scope": 11815,
+        "sourceUnit": 13940,
+        "src": "52:38:22",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -282,64 +282,64 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9227,
+              "id": 11794,
               "name": "Crowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8432,
-              "src": "261:9:21",
+              "referencedDeclaration": 10999,
+              "src": "261:9:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Crowdsale_$8432",
+                "typeIdentifier": "t_contract$_Crowdsale_$10999",
                 "typeString": "contract Crowdsale"
               }
             },
-            "id": 9228,
+            "id": 11795,
             "nodeType": "InheritanceSpecifier",
-            "src": "261:9:21"
+            "src": "261:9:22"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9229,
+              "id": 11796,
               "name": "Pausable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11372,
-              "src": "272:8:21",
+              "referencedDeclaration": 13939,
+              "src": "272:8:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Pausable_$11372",
+                "typeIdentifier": "t_contract$_Pausable_$13939",
                 "typeString": "contract Pausable"
               }
             },
-            "id": 9230,
+            "id": 11797,
             "nodeType": "InheritanceSpecifier",
-            "src": "272:8:21"
+            "src": "272:8:22"
           }
         ],
         "contractDependencies": [
-          7842,
-          8432,
-          11372,
-          16155
+          10409,
+          10999,
+          13939,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title PausableCrowdsale\n@dev Extension of Crowdsale contract where purchases can be paused and unpaused by the pauser role.",
         "fullyImplemented": false,
-        "id": 9247,
+        "id": 11814,
         "linearizedBaseContracts": [
-          9247,
-          11372,
-          7842,
-          8432,
-          16155
+          11814,
+          13939,
+          10409,
+          10999,
+          18722
         ],
         "name": "PausableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9245,
+              "id": 11812,
               "nodeType": "Block",
-              "src": "758:76:21",
+              "src": "758:76:22",
               "statements": [
                 {
                   "expression": {
@@ -347,12 +347,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9241,
+                        "id": 11808,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9232,
-                        "src": "802:12:21",
+                        "referencedDeclaration": 11799,
+                        "src": "802:12:22",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -360,12 +360,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9242,
+                        "id": 11809,
                         "name": "_weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9234,
-                        "src": "816:10:21",
+                        "referencedDeclaration": 11801,
+                        "src": "816:10:22",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -385,32 +385,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9239,
+                        "id": 11806,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 16501,
-                        "src": "775:5:21",
+                        "referencedDeclaration": 19076,
+                        "src": "775:5:22",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_PausableCrowdsale_$9247",
+                          "typeIdentifier": "t_super$_PausableCrowdsale_$11814",
                           "typeString": "contract super PausableCrowdsale"
                         }
                       },
-                      "id": 9240,
+                      "id": 11807,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_preValidatePurchase",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8363,
-                      "src": "775:26:21",
+                      "referencedDeclaration": 10930,
+                      "src": "775:26:22",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256) view"
                       }
                     },
-                    "id": 9243,
+                    "id": 11810,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -418,57 +418,57 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "775:52:21",
+                    "src": "775:52:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "functionReturnParameters": 9238,
-                  "id": 9244,
+                  "functionReturnParameters": 11805,
+                  "id": 11811,
                   "nodeType": "Return",
-                  "src": "768:59:21"
+                  "src": "768:59:22"
                 }
               ]
             },
             "documentation": "@dev Validation of an incoming purchase. Use require statements to revert state when conditions are not met.\nUse super to concatenate validations.\nAdds the validation that the crowdsale must not be paused.\n@param _beneficiary Address performing the token purchase\n@param _weiAmount Value in wei involved in the purchase",
-            "id": 9246,
+            "id": 11813,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 9237,
+                "id": 11804,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 9236,
+                  "id": 11803,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 11328,
-                  "src": "744:13:21",
+                  "referencedDeclaration": 13895,
+                  "src": "744:13:22",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "744:13:21"
+                "src": "744:13:22"
               }
             ],
             "name": "_preValidatePurchase",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9235,
+              "id": 11802,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9232,
+                  "id": 11799,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9246,
-                  "src": "688:20:21",
+                  "scope": 11813,
+                  "src": "688:20:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -476,10 +476,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9231,
+                    "id": 11798,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "688:7:21",
+                    "src": "688:7:22",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -491,11 +491,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 9234,
+                  "id": 11801,
                   "name": "_weiAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9246,
-                  "src": "710:18:21",
+                  "scope": 11813,
+                  "src": "710:18:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -503,10 +503,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9233,
+                    "id": 11800,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "710:7:21",
+                    "src": "710:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -516,39 +516,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "687:42:21"
+              "src": "687:42:22"
             },
             "returnParameters": {
-              "id": 9238,
+              "id": 11805,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "758:0:21"
+              "src": "758:0:22"
             },
-            "scope": 9247,
-            "src": "658:176:21",
+            "scope": 11814,
+            "src": "658:176:22",
             "stateMutability": "view",
-            "superFunction": 8363,
+            "superFunction": 10930,
             "visibility": "internal"
           }
         ],
-        "scope": 9248,
-        "src": "231:605:21"
+        "scope": 11815,
+        "src": "231:605:22"
       }
     ],
-    "src": "0:837:21"
+    "src": "0:837:22"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/PausableCrowdsale.sol",
     "exportedSymbols": {
       "PausableCrowdsale": [
-        9247
+        11814
       ]
     },
-    "id": 9248,
+    "id": 11815,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9224,
+        "id": 11791,
         "literals": [
           "solidity",
           "^",
@@ -556,27 +556,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:21"
+        "src": "0:23:22"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 9225,
+        "id": 11792,
         "nodeType": "ImportDirective",
-        "scope": 9248,
-        "sourceUnit": 8433,
-        "src": "25:26:21",
+        "scope": 11815,
+        "sourceUnit": 11000,
+        "src": "25:26:22",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
         "file": "../../lifecycle/Pausable.sol",
-        "id": 9226,
+        "id": 11793,
         "nodeType": "ImportDirective",
-        "scope": 9248,
-        "sourceUnit": 11373,
-        "src": "52:38:21",
+        "scope": 11815,
+        "sourceUnit": 13940,
+        "src": "52:38:22",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -586,64 +586,64 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9227,
+              "id": 11794,
               "name": "Crowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8432,
-              "src": "261:9:21",
+              "referencedDeclaration": 10999,
+              "src": "261:9:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Crowdsale_$8432",
+                "typeIdentifier": "t_contract$_Crowdsale_$10999",
                 "typeString": "contract Crowdsale"
               }
             },
-            "id": 9228,
+            "id": 11795,
             "nodeType": "InheritanceSpecifier",
-            "src": "261:9:21"
+            "src": "261:9:22"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9229,
+              "id": 11796,
               "name": "Pausable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11372,
-              "src": "272:8:21",
+              "referencedDeclaration": 13939,
+              "src": "272:8:22",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Pausable_$11372",
+                "typeIdentifier": "t_contract$_Pausable_$13939",
                 "typeString": "contract Pausable"
               }
             },
-            "id": 9230,
+            "id": 11797,
             "nodeType": "InheritanceSpecifier",
-            "src": "272:8:21"
+            "src": "272:8:22"
           }
         ],
         "contractDependencies": [
-          7842,
-          8432,
-          11372,
-          16155
+          10409,
+          10999,
+          13939,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title PausableCrowdsale\n@dev Extension of Crowdsale contract where purchases can be paused and unpaused by the pauser role.",
         "fullyImplemented": false,
-        "id": 9247,
+        "id": 11814,
         "linearizedBaseContracts": [
-          9247,
-          11372,
-          7842,
-          8432,
-          16155
+          11814,
+          13939,
+          10409,
+          10999,
+          18722
         ],
         "name": "PausableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9245,
+              "id": 11812,
               "nodeType": "Block",
-              "src": "758:76:21",
+              "src": "758:76:22",
               "statements": [
                 {
                   "expression": {
@@ -651,12 +651,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9241,
+                        "id": 11808,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9232,
-                        "src": "802:12:21",
+                        "referencedDeclaration": 11799,
+                        "src": "802:12:22",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -664,12 +664,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9242,
+                        "id": 11809,
                         "name": "_weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9234,
-                        "src": "816:10:21",
+                        "referencedDeclaration": 11801,
+                        "src": "816:10:22",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -689,32 +689,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9239,
+                        "id": 11806,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 16501,
-                        "src": "775:5:21",
+                        "referencedDeclaration": 19076,
+                        "src": "775:5:22",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_PausableCrowdsale_$9247",
+                          "typeIdentifier": "t_super$_PausableCrowdsale_$11814",
                           "typeString": "contract super PausableCrowdsale"
                         }
                       },
-                      "id": 9240,
+                      "id": 11807,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_preValidatePurchase",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8363,
-                      "src": "775:26:21",
+                      "referencedDeclaration": 10930,
+                      "src": "775:26:22",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256) view"
                       }
                     },
-                    "id": 9243,
+                    "id": 11810,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -722,57 +722,57 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "775:52:21",
+                    "src": "775:52:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "functionReturnParameters": 9238,
-                  "id": 9244,
+                  "functionReturnParameters": 11805,
+                  "id": 11811,
                   "nodeType": "Return",
-                  "src": "768:59:21"
+                  "src": "768:59:22"
                 }
               ]
             },
             "documentation": "@dev Validation of an incoming purchase. Use require statements to revert state when conditions are not met.\nUse super to concatenate validations.\nAdds the validation that the crowdsale must not be paused.\n@param _beneficiary Address performing the token purchase\n@param _weiAmount Value in wei involved in the purchase",
-            "id": 9246,
+            "id": 11813,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 9237,
+                "id": 11804,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 9236,
+                  "id": 11803,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 11328,
-                  "src": "744:13:21",
+                  "referencedDeclaration": 13895,
+                  "src": "744:13:22",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "744:13:21"
+                "src": "744:13:22"
               }
             ],
             "name": "_preValidatePurchase",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9235,
+              "id": 11802,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9232,
+                  "id": 11799,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9246,
-                  "src": "688:20:21",
+                  "scope": 11813,
+                  "src": "688:20:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -780,10 +780,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9231,
+                    "id": 11798,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "688:7:21",
+                    "src": "688:7:22",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -795,11 +795,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 9234,
+                  "id": 11801,
                   "name": "_weiAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9246,
-                  "src": "710:18:21",
+                  "scope": 11813,
+                  "src": "710:18:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -807,10 +807,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9233,
+                    "id": 11800,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "710:7:21",
+                    "src": "710:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -820,26 +820,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "687:42:21"
+              "src": "687:42:22"
             },
             "returnParameters": {
-              "id": 9238,
+              "id": 11805,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "758:0:21"
+              "src": "758:0:22"
             },
-            "scope": 9247,
-            "src": "658:176:21",
+            "scope": 11814,
+            "src": "658:176:22",
             "stateMutability": "view",
-            "superFunction": 8363,
+            "superFunction": 10930,
             "visibility": "internal"
           }
         ],
-        "scope": 9248,
-        "src": "231:605:21"
+        "scope": 11815,
+        "src": "231:605:22"
       }
     ],
-    "src": "0:837:21"
+    "src": "0:837:22"
   },
   "compiler": {
     "name": "solc",
@@ -847,7 +847,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-17T07:59:50.750Z",
+  "updatedAt": "2019-08-18T07:07:10.358Z",
   "devdoc": {
     "details": "Extension of Crowdsale contract where purchases can be paused and unpaused by the pauser role.",
     "methods": {

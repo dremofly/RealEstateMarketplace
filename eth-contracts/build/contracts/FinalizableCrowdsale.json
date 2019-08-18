@@ -218,19 +218,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\n\nimport \"../../math/SafeMath.sol\";\nimport \"../validation/TimedCrowdsale.sol\";\n\n/**\n * @title FinalizableCrowdsale\n * @dev Extension of TimedCrowdsale with a one-off finalization action, where one\n * can do extra work after finishing.\n */\ncontract FinalizableCrowdsale is TimedCrowdsale {\n    using SafeMath for uint256;\n\n    bool private _finalized;\n\n    event CrowdsaleFinalized();\n\n    constructor () internal {\n        _finalized = false;\n    }\n\n    /**\n     * @return true if the crowdsale is finalized, false otherwise.\n     */\n    function finalized() public view returns (bool) {\n        return _finalized;\n    }\n\n    /**\n     * @dev Must be called after crowdsale ends, to do some extra finalization\n     * work. Calls the contract's finalization function.\n     */\n    function finalize() public {\n        require(!_finalized, \"FinalizableCrowdsale: already finalized\");\n        require(hasClosed(), \"FinalizableCrowdsale: not closed\");\n\n        _finalized = true;\n\n        _finalization();\n        emit CrowdsaleFinalized();\n    }\n\n    /**\n     * @dev Can be overridden to add finalization logic. The overriding function\n     * should call super._finalization() to ensure the chain of finalization is\n     * executed entirely.\n     */\n    function _finalization() internal {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n}\n",
-  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
+  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
   "ast": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
     "exportedSymbols": {
       "FinalizableCrowdsale": [
-        8492
+        11059
       ]
     },
-    "id": 8493,
+    "id": 11060,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8434,
+        "id": 11001,
         "literals": [
           "solidity",
           "^",
@@ -238,27 +238,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:12"
+        "src": "0:23:13"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../../math/SafeMath.sol",
-        "id": 8435,
+        "id": 11002,
         "nodeType": "ImportDirective",
-        "scope": 8493,
-        "sourceUnit": 11575,
-        "src": "25:33:12",
+        "scope": 11060,
+        "sourceUnit": 14142,
+        "src": "25:33:13",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
         "file": "../validation/TimedCrowdsale.sol",
-        "id": 8436,
+        "id": 11003,
         "nodeType": "ImportDirective",
-        "scope": 8493,
-        "sourceUnit": 9398,
-        "src": "59:42:12",
+        "scope": 11060,
+        "sourceUnit": 11965,
+        "src": "59:42:13",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -268,60 +268,60 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 8437,
+              "id": 11004,
               "name": "TimedCrowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9397,
-              "src": "295:14:12",
+              "referencedDeclaration": 11964,
+              "src": "295:14:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TimedCrowdsale_$9397",
+                "typeIdentifier": "t_contract$_TimedCrowdsale_$11964",
                 "typeString": "contract TimedCrowdsale"
               }
             },
-            "id": 8438,
+            "id": 11005,
             "nodeType": "InheritanceSpecifier",
-            "src": "295:14:12"
+            "src": "295:14:13"
           }
         ],
         "contractDependencies": [
-          8432,
-          9397,
-          16155
+          10999,
+          11964,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title FinalizableCrowdsale\n@dev Extension of TimedCrowdsale with a one-off finalization action, where one\ncan do extra work after finishing.",
         "fullyImplemented": false,
-        "id": 8492,
+        "id": 11059,
         "linearizedBaseContracts": [
-          8492,
-          9397,
-          8432,
-          16155
+          11059,
+          11964,
+          10999,
+          18722
         ],
         "name": "FinalizableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 8441,
+            "id": 11008,
             "libraryName": {
               "contractScope": null,
-              "id": 8439,
+              "id": 11006,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11574,
-              "src": "322:8:12",
+              "referencedDeclaration": 14141,
+              "src": "322:8:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$11574",
+                "typeIdentifier": "t_contract$_SafeMath_$14141",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
-            "src": "316:27:12",
+            "src": "316:27:13",
             "typeName": {
-              "id": 8440,
+              "id": 11007,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "335:7:12",
+              "src": "335:7:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -330,11 +330,11 @@
           },
           {
             "constant": false,
-            "id": 8443,
+            "id": 11010,
             "name": "_finalized",
             "nodeType": "VariableDeclaration",
-            "scope": 8492,
-            "src": "349:23:12",
+            "scope": 11059,
+            "src": "349:23:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -342,10 +342,10 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 8442,
+              "id": 11009,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
-              "src": "349:4:12",
+              "src": "349:4:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_bool",
                 "typeString": "bool"
@@ -357,39 +357,39 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 8445,
+            "id": 11012,
             "name": "CrowdsaleFinalized",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8444,
+              "id": 11011,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "403:2:12"
+              "src": "403:2:13"
             },
-            "src": "379:27:12"
+            "src": "379:27:13"
           },
           {
             "body": {
-              "id": 8452,
+              "id": 11019,
               "nodeType": "Block",
-              "src": "436:35:12",
+              "src": "436:35:13",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8450,
+                    "id": 11017,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8448,
+                      "id": 11015,
                       "name": "_finalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8443,
-                      "src": "446:10:12",
+                      "referencedDeclaration": 11010,
+                      "src": "446:10:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -400,14 +400,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 8449,
+                      "id": 11016,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "459:5:12",
+                      "src": "459:5:13",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -415,94 +415,94 @@
                       },
                       "value": "false"
                     },
-                    "src": "446:18:12",
+                    "src": "446:18:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 8451,
+                  "id": 11018,
                   "nodeType": "ExpressionStatement",
-                  "src": "446:18:12"
+                  "src": "446:18:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 8453,
+            "id": 11020,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8446,
+              "id": 11013,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "424:2:12"
+              "src": "424:2:13"
             },
             "returnParameters": {
-              "id": 8447,
+              "id": 11014,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "436:0:12"
+              "src": "436:0:13"
             },
-            "scope": 8492,
-            "src": "412:59:12",
+            "scope": 11059,
+            "src": "412:59:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 8460,
+              "id": 11027,
               "nodeType": "Block",
-              "src": "609:34:12",
+              "src": "609:34:13",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8458,
+                    "id": 11025,
                     "name": "_finalized",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 8443,
-                    "src": "626:10:12",
+                    "referencedDeclaration": 11010,
+                    "src": "626:10:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 8457,
-                  "id": 8459,
+                  "functionReturnParameters": 11024,
+                  "id": 11026,
                   "nodeType": "Return",
-                  "src": "619:17:12"
+                  "src": "619:17:13"
                 }
               ]
             },
             "documentation": "@return true if the crowdsale is finalized, false otherwise.",
-            "id": 8461,
+            "id": 11028,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "finalized",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8454,
+              "id": 11021,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "579:2:12"
+              "src": "579:2:13"
             },
             "returnParameters": {
-              "id": 8457,
+              "id": 11024,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8456,
+                  "id": 11023,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8461,
-                  "src": "603:4:12",
+                  "scope": 11028,
+                  "src": "603:4:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -510,10 +510,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8455,
+                    "id": 11022,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "603:4:12",
+                    "src": "603:4:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -523,19 +523,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "602:6:12"
+              "src": "602:6:13"
             },
-            "scope": 8492,
-            "src": "561:82:12",
+            "scope": 11059,
+            "src": "561:82:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 8486,
+              "id": 11053,
               "nodeType": "Block",
-              "src": "828:235:12",
+              "src": "828:235:13",
               "statements": [
                 {
                   "expression": {
@@ -543,7 +543,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 8466,
+                        "id": 11033,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -551,15 +551,15 @@
                         "nodeType": "UnaryOperation",
                         "operator": "!",
                         "prefix": true,
-                        "src": "846:11:12",
+                        "src": "846:11:13",
                         "subExpression": {
                           "argumentTypes": null,
-                          "id": 8465,
+                          "id": 11032,
                           "name": "_finalized",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8443,
-                          "src": "847:10:12",
+                          "referencedDeclaration": 11010,
+                          "src": "847:10:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -573,14 +573,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "46696e616c697a61626c6543726f776473616c653a20616c72656164792066696e616c697a6564",
-                        "id": 8467,
+                        "id": 11034,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "859:41:12",
+                        "src": "859:41:13",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_add3851407fb271b99f0a6c77295a889f6e9c9fd75a445c71c8bcc137e138dde",
@@ -600,21 +600,21 @@
                           "typeString": "literal_string \"FinalizableCrowdsale: already finalized\""
                         }
                       ],
-                      "id": 8464,
+                      "id": 11031,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "838:7:12",
+                      "referencedDeclaration": 18958,
+                      "src": "838:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 8468,
+                    "id": 11035,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -622,15 +622,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "838:63:12",
+                    "src": "838:63:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8469,
+                  "id": 11036,
                   "nodeType": "ExpressionStatement",
-                  "src": "838:63:12"
+                  "src": "838:63:13"
                 },
                 {
                   "expression": {
@@ -641,18 +641,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 8471,
+                          "id": 11038,
                           "name": "hasClosed",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9350,
-                          "src": "919:9:12",
+                          "referencedDeclaration": 11917,
+                          "src": "919:9:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 8472,
+                        "id": 11039,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -660,7 +660,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "919:11:12",
+                        "src": "919:11:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -669,14 +669,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "46696e616c697a61626c6543726f776473616c653a206e6f7420636c6f736564",
-                        "id": 8473,
+                        "id": 11040,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "932:34:12",
+                        "src": "932:34:13",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_3248fca506ca48c5582f347404c127a5579310ae1e6ed4b284d29eb0ff216ace",
@@ -696,21 +696,21 @@
                           "typeString": "literal_string \"FinalizableCrowdsale: not closed\""
                         }
                       ],
-                      "id": 8470,
+                      "id": 11037,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "911:7:12",
+                      "referencedDeclaration": 18958,
+                      "src": "911:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 8474,
+                    "id": 11041,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -718,32 +718,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "911:56:12",
+                    "src": "911:56:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8475,
+                  "id": 11042,
                   "nodeType": "ExpressionStatement",
-                  "src": "911:56:12"
+                  "src": "911:56:13"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8478,
+                    "id": 11045,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8476,
+                      "id": 11043,
                       "name": "_finalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8443,
-                      "src": "978:10:12",
+                      "referencedDeclaration": 11010,
+                      "src": "978:10:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -754,14 +754,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 8477,
+                      "id": 11044,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "991:4:12",
+                      "src": "991:4:13",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -769,15 +769,15 @@
                       },
                       "value": "true"
                     },
-                    "src": "978:17:12",
+                    "src": "978:17:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 8479,
+                  "id": 11046,
                   "nodeType": "ExpressionStatement",
-                  "src": "978:17:12"
+                  "src": "978:17:13"
                 },
                 {
                   "expression": {
@@ -785,18 +785,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 8480,
+                      "id": 11047,
                       "name": "_finalization",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8491,
-                      "src": "1006:13:12",
+                      "referencedDeclaration": 11058,
+                      "src": "1006:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 8481,
+                    "id": 11048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -804,15 +804,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1006:15:12",
+                    "src": "1006:15:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8482,
+                  "id": 11049,
                   "nodeType": "ExpressionStatement",
-                  "src": "1006:15:12"
+                  "src": "1006:15:13"
                 },
                 {
                   "eventCall": {
@@ -820,18 +820,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 8483,
+                      "id": 11050,
                       "name": "CrowdsaleFinalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8445,
-                      "src": "1036:18:12",
+                      "referencedDeclaration": 11012,
+                      "src": "1036:18:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 8484,
+                    "id": 11051,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -839,94 +839,94 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1036:20:12",
+                    "src": "1036:20:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8485,
+                  "id": 11052,
                   "nodeType": "EmitStatement",
-                  "src": "1031:25:12"
+                  "src": "1031:25:13"
                 }
               ]
             },
             "documentation": "@dev Must be called after crowdsale ends, to do some extra finalization\nwork. Calls the contract's finalization function.",
-            "id": 8487,
+            "id": 11054,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "finalize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8462,
+              "id": 11029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "818:2:12"
+              "src": "818:2:13"
             },
             "returnParameters": {
-              "id": 8463,
+              "id": 11030,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "828:0:12"
+              "src": "828:0:13"
             },
-            "scope": 8492,
-            "src": "801:262:12",
+            "scope": 11059,
+            "src": "801:262:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 8490,
+              "id": 11057,
               "nodeType": "Block",
-              "src": "1306:64:12",
+              "src": "1306:64:13",
               "statements": []
             },
             "documentation": "@dev Can be overridden to add finalization logic. The overriding function\nshould call super._finalization() to ensure the chain of finalization is\nexecuted entirely.",
-            "id": 8491,
+            "id": 11058,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_finalization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8488,
+              "id": 11055,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1294:2:12"
+              "src": "1294:2:13"
             },
             "returnParameters": {
-              "id": 8489,
+              "id": 11056,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1306:0:12"
+              "src": "1306:0:13"
             },
-            "scope": 8492,
-            "src": "1272:98:12",
+            "scope": 11059,
+            "src": "1272:98:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 8493,
-        "src": "262:1110:12"
+        "scope": 11060,
+        "src": "262:1110:13"
       }
     ],
-    "src": "0:1373:12"
+    "src": "0:1373:13"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
     "exportedSymbols": {
       "FinalizableCrowdsale": [
-        8492
+        11059
       ]
     },
-    "id": 8493,
+    "id": 11060,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8434,
+        "id": 11001,
         "literals": [
           "solidity",
           "^",
@@ -934,27 +934,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:12"
+        "src": "0:23:13"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../../math/SafeMath.sol",
-        "id": 8435,
+        "id": 11002,
         "nodeType": "ImportDirective",
-        "scope": 8493,
-        "sourceUnit": 11575,
-        "src": "25:33:12",
+        "scope": 11060,
+        "sourceUnit": 14142,
+        "src": "25:33:13",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol",
         "file": "../validation/TimedCrowdsale.sol",
-        "id": 8436,
+        "id": 11003,
         "nodeType": "ImportDirective",
-        "scope": 8493,
-        "sourceUnit": 9398,
-        "src": "59:42:12",
+        "scope": 11060,
+        "sourceUnit": 11965,
+        "src": "59:42:13",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -964,60 +964,60 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 8437,
+              "id": 11004,
               "name": "TimedCrowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9397,
-              "src": "295:14:12",
+              "referencedDeclaration": 11964,
+              "src": "295:14:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TimedCrowdsale_$9397",
+                "typeIdentifier": "t_contract$_TimedCrowdsale_$11964",
                 "typeString": "contract TimedCrowdsale"
               }
             },
-            "id": 8438,
+            "id": 11005,
             "nodeType": "InheritanceSpecifier",
-            "src": "295:14:12"
+            "src": "295:14:13"
           }
         ],
         "contractDependencies": [
-          8432,
-          9397,
-          16155
+          10999,
+          11964,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title FinalizableCrowdsale\n@dev Extension of TimedCrowdsale with a one-off finalization action, where one\ncan do extra work after finishing.",
         "fullyImplemented": false,
-        "id": 8492,
+        "id": 11059,
         "linearizedBaseContracts": [
-          8492,
-          9397,
-          8432,
-          16155
+          11059,
+          11964,
+          10999,
+          18722
         ],
         "name": "FinalizableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 8441,
+            "id": 11008,
             "libraryName": {
               "contractScope": null,
-              "id": 8439,
+              "id": 11006,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11574,
-              "src": "322:8:12",
+              "referencedDeclaration": 14141,
+              "src": "322:8:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$11574",
+                "typeIdentifier": "t_contract$_SafeMath_$14141",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
-            "src": "316:27:12",
+            "src": "316:27:13",
             "typeName": {
-              "id": 8440,
+              "id": 11007,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "335:7:12",
+              "src": "335:7:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -1026,11 +1026,11 @@
           },
           {
             "constant": false,
-            "id": 8443,
+            "id": 11010,
             "name": "_finalized",
             "nodeType": "VariableDeclaration",
-            "scope": 8492,
-            "src": "349:23:12",
+            "scope": 11059,
+            "src": "349:23:13",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1038,10 +1038,10 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 8442,
+              "id": 11009,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
-              "src": "349:4:12",
+              "src": "349:4:13",
               "typeDescriptions": {
                 "typeIdentifier": "t_bool",
                 "typeString": "bool"
@@ -1053,39 +1053,39 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 8445,
+            "id": 11012,
             "name": "CrowdsaleFinalized",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8444,
+              "id": 11011,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "403:2:12"
+              "src": "403:2:13"
             },
-            "src": "379:27:12"
+            "src": "379:27:13"
           },
           {
             "body": {
-              "id": 8452,
+              "id": 11019,
               "nodeType": "Block",
-              "src": "436:35:12",
+              "src": "436:35:13",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8450,
+                    "id": 11017,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8448,
+                      "id": 11015,
                       "name": "_finalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8443,
-                      "src": "446:10:12",
+                      "referencedDeclaration": 11010,
+                      "src": "446:10:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1096,14 +1096,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 8449,
+                      "id": 11016,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "459:5:12",
+                      "src": "459:5:13",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1111,94 +1111,94 @@
                       },
                       "value": "false"
                     },
-                    "src": "446:18:12",
+                    "src": "446:18:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 8451,
+                  "id": 11018,
                   "nodeType": "ExpressionStatement",
-                  "src": "446:18:12"
+                  "src": "446:18:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 8453,
+            "id": 11020,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8446,
+              "id": 11013,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "424:2:12"
+              "src": "424:2:13"
             },
             "returnParameters": {
-              "id": 8447,
+              "id": 11014,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "436:0:12"
+              "src": "436:0:13"
             },
-            "scope": 8492,
-            "src": "412:59:12",
+            "scope": 11059,
+            "src": "412:59:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 8460,
+              "id": 11027,
               "nodeType": "Block",
-              "src": "609:34:12",
+              "src": "609:34:13",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8458,
+                    "id": 11025,
                     "name": "_finalized",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 8443,
-                    "src": "626:10:12",
+                    "referencedDeclaration": 11010,
+                    "src": "626:10:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 8457,
-                  "id": 8459,
+                  "functionReturnParameters": 11024,
+                  "id": 11026,
                   "nodeType": "Return",
-                  "src": "619:17:12"
+                  "src": "619:17:13"
                 }
               ]
             },
             "documentation": "@return true if the crowdsale is finalized, false otherwise.",
-            "id": 8461,
+            "id": 11028,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "finalized",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8454,
+              "id": 11021,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "579:2:12"
+              "src": "579:2:13"
             },
             "returnParameters": {
-              "id": 8457,
+              "id": 11024,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8456,
+                  "id": 11023,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8461,
-                  "src": "603:4:12",
+                  "scope": 11028,
+                  "src": "603:4:13",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1206,10 +1206,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8455,
+                    "id": 11022,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "603:4:12",
+                    "src": "603:4:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1219,19 +1219,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "602:6:12"
+              "src": "602:6:13"
             },
-            "scope": 8492,
-            "src": "561:82:12",
+            "scope": 11059,
+            "src": "561:82:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 8486,
+              "id": 11053,
               "nodeType": "Block",
-              "src": "828:235:12",
+              "src": "828:235:13",
               "statements": [
                 {
                   "expression": {
@@ -1239,7 +1239,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 8466,
+                        "id": 11033,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1247,15 +1247,15 @@
                         "nodeType": "UnaryOperation",
                         "operator": "!",
                         "prefix": true,
-                        "src": "846:11:12",
+                        "src": "846:11:13",
                         "subExpression": {
                           "argumentTypes": null,
-                          "id": 8465,
+                          "id": 11032,
                           "name": "_finalized",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8443,
-                          "src": "847:10:12",
+                          "referencedDeclaration": 11010,
+                          "src": "847:10:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -1269,14 +1269,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "46696e616c697a61626c6543726f776473616c653a20616c72656164792066696e616c697a6564",
-                        "id": 8467,
+                        "id": 11034,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "859:41:12",
+                        "src": "859:41:13",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_add3851407fb271b99f0a6c77295a889f6e9c9fd75a445c71c8bcc137e138dde",
@@ -1296,21 +1296,21 @@
                           "typeString": "literal_string \"FinalizableCrowdsale: already finalized\""
                         }
                       ],
-                      "id": 8464,
+                      "id": 11031,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "838:7:12",
+                      "referencedDeclaration": 18958,
+                      "src": "838:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 8468,
+                    "id": 11035,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1318,15 +1318,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "838:63:12",
+                    "src": "838:63:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8469,
+                  "id": 11036,
                   "nodeType": "ExpressionStatement",
-                  "src": "838:63:12"
+                  "src": "838:63:13"
                 },
                 {
                   "expression": {
@@ -1337,18 +1337,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 8471,
+                          "id": 11038,
                           "name": "hasClosed",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9350,
-                          "src": "919:9:12",
+                          "referencedDeclaration": 11917,
+                          "src": "919:9:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 8472,
+                        "id": 11039,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1356,7 +1356,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "919:11:12",
+                        "src": "919:11:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1365,14 +1365,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "46696e616c697a61626c6543726f776473616c653a206e6f7420636c6f736564",
-                        "id": 8473,
+                        "id": 11040,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "932:34:12",
+                        "src": "932:34:13",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_3248fca506ca48c5582f347404c127a5579310ae1e6ed4b284d29eb0ff216ace",
@@ -1392,21 +1392,21 @@
                           "typeString": "literal_string \"FinalizableCrowdsale: not closed\""
                         }
                       ],
-                      "id": 8470,
+                      "id": 11037,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "911:7:12",
+                      "referencedDeclaration": 18958,
+                      "src": "911:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 8474,
+                    "id": 11041,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1414,32 +1414,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "911:56:12",
+                    "src": "911:56:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8475,
+                  "id": 11042,
                   "nodeType": "ExpressionStatement",
-                  "src": "911:56:12"
+                  "src": "911:56:13"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 8478,
+                    "id": 11045,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8476,
+                      "id": 11043,
                       "name": "_finalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8443,
-                      "src": "978:10:12",
+                      "referencedDeclaration": 11010,
+                      "src": "978:10:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1450,14 +1450,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 8477,
+                      "id": 11044,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "991:4:12",
+                      "src": "991:4:13",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1465,15 +1465,15 @@
                       },
                       "value": "true"
                     },
-                    "src": "978:17:12",
+                    "src": "978:17:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 8479,
+                  "id": 11046,
                   "nodeType": "ExpressionStatement",
-                  "src": "978:17:12"
+                  "src": "978:17:13"
                 },
                 {
                   "expression": {
@@ -1481,18 +1481,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 8480,
+                      "id": 11047,
                       "name": "_finalization",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8491,
-                      "src": "1006:13:12",
+                      "referencedDeclaration": 11058,
+                      "src": "1006:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 8481,
+                    "id": 11048,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1500,15 +1500,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1006:15:12",
+                    "src": "1006:15:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8482,
+                  "id": 11049,
                   "nodeType": "ExpressionStatement",
-                  "src": "1006:15:12"
+                  "src": "1006:15:13"
                 },
                 {
                   "eventCall": {
@@ -1516,18 +1516,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 8483,
+                      "id": 11050,
                       "name": "CrowdsaleFinalized",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8445,
-                      "src": "1036:18:12",
+                      "referencedDeclaration": 11012,
+                      "src": "1036:18:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 8484,
+                    "id": 11051,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1535,81 +1535,81 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1036:20:12",
+                    "src": "1036:20:13",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 8485,
+                  "id": 11052,
                   "nodeType": "EmitStatement",
-                  "src": "1031:25:12"
+                  "src": "1031:25:13"
                 }
               ]
             },
             "documentation": "@dev Must be called after crowdsale ends, to do some extra finalization\nwork. Calls the contract's finalization function.",
-            "id": 8487,
+            "id": 11054,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "finalize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8462,
+              "id": 11029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "818:2:12"
+              "src": "818:2:13"
             },
             "returnParameters": {
-              "id": 8463,
+              "id": 11030,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "828:0:12"
+              "src": "828:0:13"
             },
-            "scope": 8492,
-            "src": "801:262:12",
+            "scope": 11059,
+            "src": "801:262:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 8490,
+              "id": 11057,
               "nodeType": "Block",
-              "src": "1306:64:12",
+              "src": "1306:64:13",
               "statements": []
             },
             "documentation": "@dev Can be overridden to add finalization logic. The overriding function\nshould call super._finalization() to ensure the chain of finalization is\nexecuted entirely.",
-            "id": 8491,
+            "id": 11058,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_finalization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8488,
+              "id": 11055,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1294:2:12"
+              "src": "1294:2:13"
             },
             "returnParameters": {
-              "id": 8489,
+              "id": 11056,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1306:0:12"
+              "src": "1306:0:13"
             },
-            "scope": 8492,
-            "src": "1272:98:12",
+            "scope": 11059,
+            "src": "1272:98:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 8493,
-        "src": "262:1110:12"
+        "scope": 11060,
+        "src": "262:1110:13"
       }
     ],
-    "src": "0:1373:12"
+    "src": "0:1373:13"
   },
   "compiler": {
     "name": "solc",
@@ -1617,7 +1617,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-17T07:59:50.723Z",
+  "updatedAt": "2019-08-18T07:07:10.329Z",
   "devdoc": {
     "details": "Extension of TimedCrowdsale with a one-off finalization action, where one can do extra work after finishing.",
     "methods": {

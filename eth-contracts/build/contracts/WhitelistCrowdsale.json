@@ -256,19 +256,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\nimport \"../Crowdsale.sol\";\nimport \"../../access/roles/WhitelistedRole.sol\";\n\n\n/**\n * @title WhitelistCrowdsale\n * @dev Crowdsale in which only whitelisted users can contribute.\n */\ncontract WhitelistCrowdsale is WhitelistedRole, Crowdsale {\n    /**\n     * @dev Extend parent behavior requiring beneficiary to be whitelisted. Note that no\n     * restriction is imposed on the account sending the transaction.\n     * @param _beneficiary Token beneficiary\n     * @param _weiAmount Amount of wei contributed\n     */\n    function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal view {\n        require(isWhitelisted(_beneficiary), \"WhitelistCrowdsale: beneficiary doesn't have the Whitelisted role\");\n        super._preValidatePurchase(_beneficiary, _weiAmount);\n    }\n}\n",
-  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
+  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
   "ast": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
     "exportedSymbols": {
       "WhitelistCrowdsale": [
-        9428
+        11995
       ]
     },
-    "id": 9429,
+    "id": 11996,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9399,
+        "id": 11966,
         "literals": [
           "solidity",
           "^",
@@ -276,27 +276,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:23"
+        "src": "0:23:24"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 9400,
+        "id": 11967,
         "nodeType": "ImportDirective",
-        "scope": 9429,
-        "sourceUnit": 8433,
-        "src": "24:26:23",
+        "scope": 11996,
+        "sourceUnit": 11000,
+        "src": "24:26:24",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/access/roles/WhitelistedRole.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/access/roles/WhitelistedRole.sol",
         "file": "../../access/roles/WhitelistedRole.sol",
-        "id": 9401,
+        "id": 11968,
         "nodeType": "ImportDirective",
-        "scope": 9429,
-        "sourceUnit": 8161,
-        "src": "51:48:23",
+        "scope": 11996,
+        "sourceUnit": 10728,
+        "src": "51:48:24",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -306,64 +306,64 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9402,
+              "id": 11969,
               "name": "WhitelistedRole",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8160,
-              "src": "236:15:23",
+              "referencedDeclaration": 10727,
+              "src": "236:15:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_WhitelistedRole_$8160",
+                "typeIdentifier": "t_contract$_WhitelistedRole_$10727",
                 "typeString": "contract WhitelistedRole"
               }
             },
-            "id": 9403,
+            "id": 11970,
             "nodeType": "InheritanceSpecifier",
-            "src": "236:15:23"
+            "src": "236:15:24"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9404,
+              "id": 11971,
               "name": "Crowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8432,
-              "src": "253:9:23",
+              "referencedDeclaration": 10999,
+              "src": "253:9:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Crowdsale_$8432",
+                "typeIdentifier": "t_contract$_Crowdsale_$10999",
                 "typeString": "contract Crowdsale"
               }
             },
-            "id": 9405,
+            "id": 11972,
             "nodeType": "InheritanceSpecifier",
-            "src": "253:9:23"
+            "src": "253:9:24"
           }
         ],
         "contractDependencies": [
-          8050,
-          8160,
-          8432,
-          16155
+          10617,
+          10727,
+          10999,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title WhitelistCrowdsale\n@dev Crowdsale in which only whitelisted users can contribute.",
         "fullyImplemented": false,
-        "id": 9428,
+        "id": 11995,
         "linearizedBaseContracts": [
-          9428,
-          8432,
-          16155,
-          8160,
-          8050
+          11995,
+          10999,
+          18722,
+          10727,
+          10617
         ],
         "name": "WhitelistCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9426,
+              "id": 11993,
               "nodeType": "Block",
-              "src": "626:184:23",
+              "src": "626:184:24",
               "statements": [
                 {
                   "expression": {
@@ -374,12 +374,12 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 9414,
+                            "id": 11981,
                             "name": "_beneficiary",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9407,
-                            "src": "658:12:23",
+                            "referencedDeclaration": 11974,
+                            "src": "658:12:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -393,18 +393,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 9413,
+                          "id": 11980,
                           "name": "isWhitelisted",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8094,
-                          "src": "644:13:23",
+                          "referencedDeclaration": 10661,
+                          "src": "644:13:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view returns (bool)"
                           }
                         },
-                        "id": 9415,
+                        "id": 11982,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -412,7 +412,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "644:27:23",
+                        "src": "644:27:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -421,14 +421,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "57686974656c69737443726f776473616c653a2062656e656669636961727920646f65736e27742068617665207468652057686974656c697374656420726f6c65",
-                        "id": 9416,
+                        "id": 11983,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "673:67:23",
+                        "src": "673:67:24",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_0d4d81a9acac4fa209d4fd468306311d92f08da1d0ae45d65f549de57dd92548",
@@ -448,21 +448,21 @@
                           "typeString": "literal_string \"WhitelistCrowdsale: beneficiary doesn't have the Whitelisted role\""
                         }
                       ],
-                      "id": 9412,
+                      "id": 11979,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "636:7:23",
+                      "referencedDeclaration": 18958,
+                      "src": "636:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 9417,
+                    "id": 11984,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -470,15 +470,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "636:105:23",
+                    "src": "636:105:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9418,
+                  "id": 11985,
                   "nodeType": "ExpressionStatement",
-                  "src": "636:105:23"
+                  "src": "636:105:24"
                 },
                 {
                   "expression": {
@@ -486,12 +486,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9422,
+                        "id": 11989,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9407,
-                        "src": "778:12:23",
+                        "referencedDeclaration": 11974,
+                        "src": "778:12:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -499,12 +499,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9423,
+                        "id": 11990,
                         "name": "_weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9409,
-                        "src": "792:10:23",
+                        "referencedDeclaration": 11976,
+                        "src": "792:10:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -524,32 +524,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9419,
+                        "id": 11986,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 16503,
-                        "src": "751:5:23",
+                        "referencedDeclaration": 19078,
+                        "src": "751:5:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_WhitelistCrowdsale_$9428",
+                          "typeIdentifier": "t_super$_WhitelistCrowdsale_$11995",
                           "typeString": "contract super WhitelistCrowdsale"
                         }
                       },
-                      "id": 9421,
+                      "id": 11988,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_preValidatePurchase",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8363,
-                      "src": "751:26:23",
+                      "referencedDeclaration": 10930,
+                      "src": "751:26:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256) view"
                       }
                     },
-                    "id": 9424,
+                    "id": 11991,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -557,36 +557,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "751:52:23",
+                    "src": "751:52:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9425,
+                  "id": 11992,
                   "nodeType": "ExpressionStatement",
-                  "src": "751:52:23"
+                  "src": "751:52:24"
                 }
               ]
             },
             "documentation": "@dev Extend parent behavior requiring beneficiary to be whitelisted. Note that no\nrestriction is imposed on the account sending the transaction.\n@param _beneficiary Token beneficiary\n@param _weiAmount Amount of wei contributed",
-            "id": 9427,
+            "id": 11994,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_preValidatePurchase",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9410,
+              "id": 11977,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9407,
+                  "id": 11974,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9427,
-                  "src": "570:20:23",
+                  "scope": 11994,
+                  "src": "570:20:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -594,10 +594,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9406,
+                    "id": 11973,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "570:7:23",
+                    "src": "570:7:24",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -609,11 +609,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 9409,
+                  "id": 11976,
                   "name": "_weiAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9427,
-                  "src": "592:18:23",
+                  "scope": 11994,
+                  "src": "592:18:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -621,10 +621,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9408,
+                    "id": 11975,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "592:7:23",
+                    "src": "592:7:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -634,39 +634,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "569:42:23"
+              "src": "569:42:24"
             },
             "returnParameters": {
-              "id": 9411,
+              "id": 11978,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "626:0:23"
+              "src": "626:0:24"
             },
-            "scope": 9428,
-            "src": "540:270:23",
+            "scope": 11995,
+            "src": "540:270:24",
             "stateMutability": "view",
-            "superFunction": 8363,
+            "superFunction": 10930,
             "visibility": "internal"
           }
         ],
-        "scope": 9429,
-        "src": "205:607:23"
+        "scope": 11996,
+        "src": "205:607:24"
       }
     ],
-    "src": "0:813:23"
+    "src": "0:813:24"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/validation/WhitelistCrowdsale.sol",
     "exportedSymbols": {
       "WhitelistCrowdsale": [
-        9428
+        11995
       ]
     },
-    "id": 9429,
+    "id": 11996,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9399,
+        "id": 11966,
         "literals": [
           "solidity",
           "^",
@@ -674,27 +674,27 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:23"
+        "src": "0:23:24"
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 9400,
+        "id": 11967,
         "nodeType": "ImportDirective",
-        "scope": 9429,
-        "sourceUnit": 8433,
-        "src": "24:26:23",
+        "scope": 11996,
+        "sourceUnit": 11000,
+        "src": "24:26:24",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/access/roles/WhitelistedRole.sol",
+        "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/access/roles/WhitelistedRole.sol",
         "file": "../../access/roles/WhitelistedRole.sol",
-        "id": 9401,
+        "id": 11968,
         "nodeType": "ImportDirective",
-        "scope": 9429,
-        "sourceUnit": 8161,
-        "src": "51:48:23",
+        "scope": 11996,
+        "sourceUnit": 10728,
+        "src": "51:48:24",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -704,64 +704,64 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9402,
+              "id": 11969,
               "name": "WhitelistedRole",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8160,
-              "src": "236:15:23",
+              "referencedDeclaration": 10727,
+              "src": "236:15:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_WhitelistedRole_$8160",
+                "typeIdentifier": "t_contract$_WhitelistedRole_$10727",
                 "typeString": "contract WhitelistedRole"
               }
             },
-            "id": 9403,
+            "id": 11970,
             "nodeType": "InheritanceSpecifier",
-            "src": "236:15:23"
+            "src": "236:15:24"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9404,
+              "id": 11971,
               "name": "Crowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 8432,
-              "src": "253:9:23",
+              "referencedDeclaration": 10999,
+              "src": "253:9:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Crowdsale_$8432",
+                "typeIdentifier": "t_contract$_Crowdsale_$10999",
                 "typeString": "contract Crowdsale"
               }
             },
-            "id": 9405,
+            "id": 11972,
             "nodeType": "InheritanceSpecifier",
-            "src": "253:9:23"
+            "src": "253:9:24"
           }
         ],
         "contractDependencies": [
-          8050,
-          8160,
-          8432,
-          16155
+          10617,
+          10727,
+          10999,
+          18722
         ],
         "contractKind": "contract",
         "documentation": "@title WhitelistCrowdsale\n@dev Crowdsale in which only whitelisted users can contribute.",
         "fullyImplemented": false,
-        "id": 9428,
+        "id": 11995,
         "linearizedBaseContracts": [
-          9428,
-          8432,
-          16155,
-          8160,
-          8050
+          11995,
+          10999,
+          18722,
+          10727,
+          10617
         ],
         "name": "WhitelistCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9426,
+              "id": 11993,
               "nodeType": "Block",
-              "src": "626:184:23",
+              "src": "626:184:24",
               "statements": [
                 {
                   "expression": {
@@ -772,12 +772,12 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 9414,
+                            "id": 11981,
                             "name": "_beneficiary",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9407,
-                            "src": "658:12:23",
+                            "referencedDeclaration": 11974,
+                            "src": "658:12:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -791,18 +791,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 9413,
+                          "id": 11980,
                           "name": "isWhitelisted",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8094,
-                          "src": "644:13:23",
+                          "referencedDeclaration": 10661,
+                          "src": "644:13:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view returns (bool)"
                           }
                         },
-                        "id": 9415,
+                        "id": 11982,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -810,7 +810,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "644:27:23",
+                        "src": "644:27:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -819,14 +819,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "57686974656c69737443726f776473616c653a2062656e656669636961727920646f65736e27742068617665207468652057686974656c697374656420726f6c65",
-                        "id": 9416,
+                        "id": 11983,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "673:67:23",
+                        "src": "673:67:24",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_0d4d81a9acac4fa209d4fd468306311d92f08da1d0ae45d65f549de57dd92548",
@@ -846,21 +846,21 @@
                           "typeString": "literal_string \"WhitelistCrowdsale: beneficiary doesn't have the Whitelisted role\""
                         }
                       ],
-                      "id": 9412,
+                      "id": 11979,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        16390,
-                        16391
+                        18957,
+                        18958
                       ],
-                      "referencedDeclaration": 16391,
-                      "src": "636:7:23",
+                      "referencedDeclaration": 18958,
+                      "src": "636:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 9417,
+                    "id": 11984,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -868,15 +868,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "636:105:23",
+                    "src": "636:105:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9418,
+                  "id": 11985,
                   "nodeType": "ExpressionStatement",
-                  "src": "636:105:23"
+                  "src": "636:105:24"
                 },
                 {
                   "expression": {
@@ -884,12 +884,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9422,
+                        "id": 11989,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9407,
-                        "src": "778:12:23",
+                        "referencedDeclaration": 11974,
+                        "src": "778:12:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -897,12 +897,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9423,
+                        "id": 11990,
                         "name": "_weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9409,
-                        "src": "792:10:23",
+                        "referencedDeclaration": 11976,
+                        "src": "792:10:24",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -922,32 +922,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9419,
+                        "id": 11986,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 16503,
-                        "src": "751:5:23",
+                        "referencedDeclaration": 19078,
+                        "src": "751:5:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_WhitelistCrowdsale_$9428",
+                          "typeIdentifier": "t_super$_WhitelistCrowdsale_$11995",
                           "typeString": "contract super WhitelistCrowdsale"
                         }
                       },
-                      "id": 9421,
+                      "id": 11988,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_preValidatePurchase",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8363,
-                      "src": "751:26:23",
+                      "referencedDeclaration": 10930,
+                      "src": "751:26:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256) view"
                       }
                     },
-                    "id": 9424,
+                    "id": 11991,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -955,36 +955,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "751:52:23",
+                    "src": "751:52:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9425,
+                  "id": 11992,
                   "nodeType": "ExpressionStatement",
-                  "src": "751:52:23"
+                  "src": "751:52:24"
                 }
               ]
             },
             "documentation": "@dev Extend parent behavior requiring beneficiary to be whitelisted. Note that no\nrestriction is imposed on the account sending the transaction.\n@param _beneficiary Token beneficiary\n@param _weiAmount Amount of wei contributed",
-            "id": 9427,
+            "id": 11994,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_preValidatePurchase",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9410,
+              "id": 11977,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9407,
+                  "id": 11974,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9427,
-                  "src": "570:20:23",
+                  "scope": 11994,
+                  "src": "570:20:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -992,10 +992,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9406,
+                    "id": 11973,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "570:7:23",
+                    "src": "570:7:24",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1007,11 +1007,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 9409,
+                  "id": 11976,
                   "name": "_weiAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9427,
-                  "src": "592:18:23",
+                  "scope": 11994,
+                  "src": "592:18:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1019,10 +1019,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9408,
+                    "id": 11975,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "592:7:23",
+                    "src": "592:7:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1032,26 +1032,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "569:42:23"
+              "src": "569:42:24"
             },
             "returnParameters": {
-              "id": 9411,
+              "id": 11978,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "626:0:23"
+              "src": "626:0:24"
             },
-            "scope": 9428,
-            "src": "540:270:23",
+            "scope": 11995,
+            "src": "540:270:24",
             "stateMutability": "view",
-            "superFunction": 8363,
+            "superFunction": 10930,
             "visibility": "internal"
           }
         ],
-        "scope": 9429,
-        "src": "205:607:23"
+        "scope": 11996,
+        "src": "205:607:24"
       }
     ],
-    "src": "0:813:23"
+    "src": "0:813:24"
   },
   "compiler": {
     "name": "solc",
@@ -1059,7 +1059,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-17T07:59:50.756Z",
+  "updatedAt": "2019-08-18T07:07:10.377Z",
   "devdoc": {
     "details": "Crowdsale in which only whitelisted users can contribute.",
     "methods": {

@@ -1,0 +1,110 @@
+{
+  "contractName": "SolnSquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/SolnSquareVerifier.sol\":\"SolnSquareVerifier\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/SolnSquareVerifier.sol\":{\"keccak256\":\"0xd417b160c964511d7338d050eeb798b6c16de971cf48e1176206f40a02ece1d9\",\"urls\":[\"bzzr://03040d31f5650ad07599b8baae1a62297bad34604d571b1dca162ecec494e26c\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820a33273987baf3018b6c87db6daea8aae30a269ae4c9bc3c7ba0ce242fbbd74490029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820a33273987baf3018b6c87db6daea8aae30a269ae4c9bc3c7ba0ce242fbbd74490029",
+  "sourceMap": "784:38:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:38:3;;;;;;;",
+  "deployedSourceMap": "784:38:3:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\n// TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>\n\n\n\n// TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class\n\n\n\n// TODO define a solutions struct that can hold an index & an address\n\n\n// TODO define an array of the above struct\n\n\n// TODO define a mapping to store unique solutions submitted\n\n\n\n// TODO Create an event to emit when a solution is added\n\n\n\n// TODO Create a function to add the solutions to the array and emit the event\n\n\n\n// TODO Create a function to mint new NFT only after the solution has been verified\n//  - make sure the solution is unique (has not been used before)\n//  - make sure you handle metadata as well as tokenSuplly\n\n contract SolnSquareVerifier {\n     \n } \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7458
+      ]
+    },
+    "id": 7459,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7457,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7458,
+        "linearizedBaseContracts": [
+          7458
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7459,
+        "src": "784:38:3"
+      }
+    ],
+    "src": "0:850:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7458
+      ]
+    },
+    "id": 7459,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7457,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7458,
+        "linearizedBaseContracts": [
+          7458
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7459,
+        "src": "784:38:3"
+      }
+    ],
+    "src": "0:850:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-08-18T07:07:10.102Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

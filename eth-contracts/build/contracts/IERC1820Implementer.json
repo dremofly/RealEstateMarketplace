@@ -31,19 +31,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\n\n/**\n * @dev Interface for an ERC1820 implementer, as defined in the\n * [EIP](https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface).\n * Used by contracts that will be registered as implementers in the\n * `IERC1820Registry`.\n */\ninterface IERC1820Implementer {\n    /**\n     * @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n     * implements `interfaceHash` for `account`.\n     *\n     * See `IERC1820Registry.setInterfaceImplementer`.\n     */\n    function canImplementInterfaceForAddress(bytes32 interfaceHash, address account) external view returns (bytes32);\n}\n",
-  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
+  "sourcePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
   "ast": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
     "exportedSymbols": {
       "IERC1820Implementer": [
-        11206
+        13773
       ]
     },
-    "id": 11207,
+    "id": 13774,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11196,
+        "id": 13763,
         "literals": [
           "solidity",
           "^",
@@ -51,7 +51,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:37"
+        "src": "0:23:38"
       },
       {
         "baseContracts": [],
@@ -59,9 +59,9 @@
         "contractKind": "interface",
         "documentation": "@dev Interface for an ERC1820 implementer, as defined in the\n[EIP](https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface).\nUsed by contracts that will be registered as implementers in the\n`IERC1820Registry`.",
         "fullyImplemented": false,
-        "id": 11206,
+        "id": 13773,
         "linearizedBaseContracts": [
-          11206
+          13773
         ],
         "name": "IERC1820Implementer",
         "nodeType": "ContractDefinition",
@@ -69,23 +69,23 @@
           {
             "body": null,
             "documentation": "@dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\nimplements `interfaceHash` for `account`.\n     * See `IERC1820Registry.setInterfaceImplementer`.",
-            "id": 11205,
+            "id": 13772,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "canImplementInterfaceForAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11201,
+              "id": 13768,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11198,
+                  "id": 13765,
                   "name": "interfaceHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "574:21:37",
+                  "scope": 13772,
+                  "src": "574:21:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -93,10 +93,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 11197,
+                    "id": 13764,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "574:7:37",
+                    "src": "574:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -107,11 +107,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 11200,
+                  "id": 13767,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "597:15:37",
+                  "scope": 13772,
+                  "src": "597:15:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -119,10 +119,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11199,
+                    "id": 13766,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "597:7:37",
+                    "src": "597:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -133,19 +133,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "573:40:37"
+              "src": "573:40:38"
             },
             "returnParameters": {
-              "id": 11204,
+              "id": 13771,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11203,
+                  "id": 13770,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "637:7:37",
+                  "scope": 13772,
+                  "src": "637:7:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -153,10 +153,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 11202,
+                    "id": 13769,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "637:7:37",
+                    "src": "637:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -166,33 +166,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "636:9:37"
+              "src": "636:9:38"
             },
-            "scope": 11206,
-            "src": "533:113:37",
+            "scope": 13773,
+            "src": "533:113:38",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 11207,
-        "src": "292:356:37"
+        "scope": 13774,
+        "src": "292:356:38"
       }
     ],
-    "src": "0:649:37"
+    "src": "0:649:38"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/Blockchain-Capstone/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
+    "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/introspection/IERC1820Implementer.sol",
     "exportedSymbols": {
       "IERC1820Implementer": [
-        11206
+        13773
       ]
     },
-    "id": 11207,
+    "id": 13774,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11196,
+        "id": 13763,
         "literals": [
           "solidity",
           "^",
@@ -200,7 +200,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:37"
+        "src": "0:23:38"
       },
       {
         "baseContracts": [],
@@ -208,9 +208,9 @@
         "contractKind": "interface",
         "documentation": "@dev Interface for an ERC1820 implementer, as defined in the\n[EIP](https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface).\nUsed by contracts that will be registered as implementers in the\n`IERC1820Registry`.",
         "fullyImplemented": false,
-        "id": 11206,
+        "id": 13773,
         "linearizedBaseContracts": [
-          11206
+          13773
         ],
         "name": "IERC1820Implementer",
         "nodeType": "ContractDefinition",
@@ -218,23 +218,23 @@
           {
             "body": null,
             "documentation": "@dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\nimplements `interfaceHash` for `account`.\n     * See `IERC1820Registry.setInterfaceImplementer`.",
-            "id": 11205,
+            "id": 13772,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "canImplementInterfaceForAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11201,
+              "id": 13768,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11198,
+                  "id": 13765,
                   "name": "interfaceHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "574:21:37",
+                  "scope": 13772,
+                  "src": "574:21:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -242,10 +242,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 11197,
+                    "id": 13764,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "574:7:37",
+                    "src": "574:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -256,11 +256,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 11200,
+                  "id": 13767,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "597:15:37",
+                  "scope": 13772,
+                  "src": "597:15:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -268,10 +268,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11199,
+                    "id": 13766,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "597:7:37",
+                    "src": "597:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -282,19 +282,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "573:40:37"
+              "src": "573:40:38"
             },
             "returnParameters": {
-              "id": 11204,
+              "id": 13771,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11203,
+                  "id": 13770,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11205,
-                  "src": "637:7:37",
+                  "scope": 13772,
+                  "src": "637:7:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -302,10 +302,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 11202,
+                    "id": 13769,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "637:7:37",
+                    "src": "637:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -315,20 +315,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "636:9:37"
+              "src": "636:9:38"
             },
-            "scope": 11206,
-            "src": "533:113:37",
+            "scope": 13773,
+            "src": "533:113:38",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 11207,
-        "src": "292:356:37"
+        "scope": 13774,
+        "src": "292:356:38"
       }
     ],
-    "src": "0:649:37"
+    "src": "0:649:38"
   },
   "compiler": {
     "name": "solc",
@@ -336,7 +336,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-17T07:59:50.801Z",
+  "updatedAt": "2019-08-18T07:07:10.438Z",
   "devdoc": {
     "details": "Interface for an ERC1820 implementer, as defined in the [EIP](https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface). Used by contracts that will be registered as implementers in the `IERC1820Registry`.",
     "methods": {
