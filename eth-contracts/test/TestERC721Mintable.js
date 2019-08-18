@@ -25,16 +25,22 @@ contract('TestERC721Mintable', accounts => {
         })
 
         it('should get token balance', async function () { 
-            
+            let tokenBalance = await this.contract.balanceOf(account_one);
+            assert.equal(tokenBalance, 5, "The balance of account_one should be 5")
         })
 
         // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
         it('should return token uri', async function () { 
-            
+            let tokenUri = await this.contract.tokenURI(1)
+            console.log(tokenUri);
+            assert.equal(tokenUri, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1", "The token uri is right")
         })
 
         it('should transfer token from one owner to another', async function () { 
-            
+            await this.contract.transferFrom(account_one, account_two, 0, {from: account_one});
+            let balance = await this.contract.balanceOf(account_two);
+
+            assert.equal(balance, 1, "The balance of account_two should be 1 after transferfing.");                                          
         })
     });
 
