@@ -20,7 +20,8 @@ contract('TestERC721Mintable', accounts => {
 
         it('should return total supply', async function () { 
             let count = await this.contract.totalSupply.call();
-            console.log(count.toNumber());            
+            //console.log(count.toNumber());            
+            assert.equal(count, 5, "The number of tokens should be 5")
         })
 
         it('should get token balance', async function () { 
