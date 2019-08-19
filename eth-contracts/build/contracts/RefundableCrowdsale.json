@@ -270,14 +270,14 @@
     "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/RefundableCrowdsale.sol",
     "exportedSymbols": {
       "RefundableCrowdsale": [
-        11316
+        11470
       ]
     },
-    "id": 11317,
+    "id": 11471,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11189,
+        "id": 11343,
         "literals": [
           "solidity",
           "^",
@@ -290,10 +290,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../../math/SafeMath.sol",
-        "id": 11190,
+        "id": 11344,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 14142,
+        "scope": 11471,
+        "sourceUnit": 14296,
         "src": "25:33:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -301,10 +301,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
         "file": "./FinalizableCrowdsale.sol",
-        "id": 11191,
+        "id": 11345,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 11060,
+        "scope": 11471,
+        "sourceUnit": 11214,
         "src": "59:36:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -312,10 +312,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/payment/escrow/RefundEscrow.sol",
         "file": "../../payment/escrow/RefundEscrow.sol",
-        "id": 11192,
+        "id": 11346,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 14952,
+        "scope": 11471,
+        "sourceUnit": 15106,
         "src": "96:47:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -326,60 +326,60 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11193,
+              "id": 11347,
               "name": "FinalizableCrowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11059,
+              "referencedDeclaration": 11213,
               "src": "832:20:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FinalizableCrowdsale_$11059",
+                "typeIdentifier": "t_contract$_FinalizableCrowdsale_$11213",
                 "typeString": "contract FinalizableCrowdsale"
               }
             },
-            "id": 11194,
+            "id": 11348,
             "nodeType": "InheritanceSpecifier",
             "src": "832:20:15"
           }
         ],
         "contractDependencies": [
-          10999,
-          11059,
-          11964,
-          14951,
-          18722
+          11153,
+          11213,
+          12118,
+          15105,
+          18876
         ],
         "contractKind": "contract",
         "documentation": "@title RefundableCrowdsale\n@dev Extension of `FinalizableCrowdsale` contract that adds a funding goal, and the possibility of users\ngetting a refund if goal is not met.\n * Deprecated, use `RefundablePostDeliveryCrowdsale` instead. Note that if you allow tokens to be traded before the goal\nis met, then an attack is possible in which the attacker purchases tokens from the crowdsale and when they sees that\nthe goal is unlikely to be met, they sell their tokens (possibly at a discount). The attacker will be refunded when\nthe crowdsale is finalized, and the users that purchased from them will be left with worthless tokens.",
         "fullyImplemented": false,
-        "id": 11316,
+        "id": 11470,
         "linearizedBaseContracts": [
-          11316,
-          11059,
-          11964,
-          10999,
-          18722
+          11470,
+          11213,
+          12118,
+          11153,
+          18876
         ],
         "name": "RefundableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 11197,
+            "id": 11351,
             "libraryName": {
               "contractScope": null,
-              "id": 11195,
+              "id": 11349,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 14141,
+              "referencedDeclaration": 14295,
               "src": "865:8:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$14141",
+                "typeIdentifier": "t_contract$_SafeMath_$14295",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "859:27:15",
             "typeName": {
-              "id": 11196,
+              "id": 11350,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "878:7:15",
@@ -391,10 +391,10 @@
           },
           {
             "constant": false,
-            "id": 11199,
+            "id": 11353,
             "name": "_goal",
             "nodeType": "VariableDeclaration",
-            "scope": 11316,
+            "scope": 11470,
             "src": "944:21:15",
             "stateVariable": true,
             "storageLocation": "default",
@@ -403,7 +403,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11198,
+              "id": 11352,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "944:7:15",
@@ -417,26 +417,26 @@
           },
           {
             "constant": false,
-            "id": 11201,
+            "id": 11355,
             "name": "_escrow",
             "nodeType": "VariableDeclaration",
-            "scope": 11316,
+            "scope": 11470,
             "src": "1039:28:15",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+              "typeIdentifier": "t_contract$_RefundEscrow_$15105",
               "typeString": "contract RefundEscrow"
             },
             "typeName": {
               "contractScope": null,
-              "id": 11200,
+              "id": 11354,
               "name": "RefundEscrow",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 14951,
+              "referencedDeclaration": 15105,
               "src": "1039:12:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                 "typeString": "contract RefundEscrow"
               }
             },
@@ -445,7 +445,7 @@
           },
           {
             "body": {
-              "id": 11225,
+              "id": 11379,
               "nodeType": "Block",
               "src": "1203:136:15",
               "statements": [
@@ -459,18 +459,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 11209,
+                        "id": 11363,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 11207,
+                          "id": 11361,
                           "name": "goal",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11203,
+                          "referencedDeclaration": 11357,
                           "src": "1221:4:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -482,7 +482,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 11208,
+                          "id": 11362,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -506,7 +506,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a20676f616c2069732030",
-                        "id": 11210,
+                        "id": 11364,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -533,21 +533,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: goal is 0\""
                         }
                       ],
-                      "id": 11206,
+                      "id": 11360,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1213:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11211,
+                    "id": 11365,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -561,28 +561,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11212,
+                  "id": 11366,
                   "nodeType": "ExpressionStatement",
                   "src": "1213:51:15"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11219,
+                    "id": 11373,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11213,
+                      "id": 11367,
                       "name": "_escrow",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11201,
+                      "referencedDeclaration": 11355,
                       "src": "1274:7:15",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                        "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                         "typeString": "contract RefundEscrow"
                       }
                     },
@@ -596,18 +596,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11216,
+                            "id": 11370,
                             "name": "wallet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10833,
+                            "referencedDeclaration": 10987,
                             "src": "1301:6:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
                               "typeString": "function () view returns (address payable)"
                             }
                           },
-                          "id": 11217,
+                          "id": 11371,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -629,7 +629,7 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 11215,
+                        "id": 11369,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -637,23 +637,23 @@
                         "nodeType": "NewExpression",
                         "src": "1284:16:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_payable_$returns$_t_contract$_RefundEscrow_$14951_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_payable_$returns$_t_contract$_RefundEscrow_$15105_$",
                           "typeString": "function (address payable) returns (contract RefundEscrow)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 11214,
+                          "id": 11368,
                           "name": "RefundEscrow",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 14951,
+                          "referencedDeclaration": 15105,
                           "src": "1288:12:15",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                            "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                             "typeString": "contract RefundEscrow"
                           }
                         }
                       },
-                      "id": 11218,
+                      "id": 11372,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -663,35 +663,35 @@
                       "nodeType": "FunctionCall",
                       "src": "1284:26:15",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                        "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                         "typeString": "contract RefundEscrow"
                       }
                     },
                     "src": "1274:36:15",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                      "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                       "typeString": "contract RefundEscrow"
                     }
                   },
-                  "id": 11220,
+                  "id": 11374,
                   "nodeType": "ExpressionStatement",
                   "src": "1274:36:15"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11223,
+                    "id": 11377,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11221,
+                      "id": 11375,
                       "name": "_goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11199,
+                      "referencedDeclaration": 11353,
                       "src": "1320:5:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -702,11 +702,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11222,
+                      "id": 11376,
                       "name": "goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11203,
+                      "referencedDeclaration": 11357,
                       "src": "1328:4:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -719,29 +719,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 11224,
+                  "id": 11378,
                   "nodeType": "ExpressionStatement",
                   "src": "1320:12:15"
                 }
               ]
             },
             "documentation": "@dev Constructor, creates RefundEscrow.\n@param goal Funding goal",
-            "id": 11226,
+            "id": 11380,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11204,
+              "id": 11358,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11203,
+                  "id": 11357,
                   "name": "goal",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11226,
+                  "scope": 11380,
                   "src": "1182:12:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -750,7 +750,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11202,
+                    "id": 11356,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1182:7:15",
@@ -766,12 +766,12 @@
               "src": "1181:14:15"
             },
             "returnParameters": {
-              "id": 11205,
+              "id": 11359,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1203:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1169:170:15",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -779,54 +779,54 @@
           },
           {
             "body": {
-              "id": 11233,
+              "id": 11387,
               "nodeType": "Block",
               "src": "1467:29:15",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11231,
+                    "id": 11385,
                     "name": "_goal",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11199,
+                    "referencedDeclaration": 11353,
                     "src": "1484:5:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 11230,
-                  "id": 11232,
+                  "functionReturnParameters": 11384,
+                  "id": 11386,
                   "nodeType": "Return",
                   "src": "1477:12:15"
                 }
               ]
             },
             "documentation": "@return minimum amount of funds to be raised in wei.",
-            "id": 11234,
+            "id": 11388,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "goal",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11227,
+              "id": 11381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1434:2:15"
             },
             "returnParameters": {
-              "id": 11230,
+              "id": 11384,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11229,
+                  "id": 11383,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11234,
+                  "scope": 11388,
                   "src": "1458:7:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -835,7 +835,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11228,
+                    "id": 11382,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1458:7:15",
@@ -850,7 +850,7 @@
               ],
               "src": "1457:9:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1421:75:15",
             "stateMutability": "view",
             "superFunction": null,
@@ -858,7 +858,7 @@
           },
           {
             "body": {
-              "id": 11258,
+              "id": 11412,
               "nodeType": "Block",
               "src": "1700:182:15",
               "statements": [
@@ -871,18 +871,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 11240,
+                          "id": 11394,
                           "name": "finalized",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11028,
+                          "referencedDeclaration": 11182,
                           "src": "1718:9:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 11241,
+                        "id": 11395,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -899,7 +899,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a206e6f742066696e616c697a6564",
-                        "id": 11242,
+                        "id": 11396,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -926,21 +926,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: not finalized\""
                         }
                       ],
-                      "id": 11239,
+                      "id": 11393,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1710:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11243,
+                    "id": 11397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -954,7 +954,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11244,
+                  "id": 11398,
                   "nodeType": "ExpressionStatement",
                   "src": "1710:58:15"
                 },
@@ -964,7 +964,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11248,
+                        "id": 11402,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -978,18 +978,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11246,
+                            "id": 11400,
                             "name": "goalReached",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11270,
+                            "referencedDeclaration": 11424,
                             "src": "1787:11:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                               "typeString": "function () view returns (bool)"
                             }
                           },
-                          "id": 11247,
+                          "id": 11401,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1011,7 +1011,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a20676f616c2072656163686564",
-                        "id": 11249,
+                        "id": 11403,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1038,21 +1038,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: goal reached\""
                         }
                       ],
-                      "id": 11245,
+                      "id": 11399,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1778:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11250,
+                    "id": 11404,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1066,7 +1066,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11251,
+                  "id": 11405,
                   "nodeType": "ExpressionStatement",
                   "src": "1778:60:15"
                 },
@@ -1076,11 +1076,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11255,
+                        "id": 11409,
                         "name": "refundee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11236,
+                        "referencedDeclaration": 11390,
                         "src": "1866:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
@@ -1097,32 +1097,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11252,
+                        "id": 11406,
                         "name": "_escrow",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11201,
+                        "referencedDeclaration": 11355,
                         "src": "1849:7:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                          "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                           "typeString": "contract RefundEscrow"
                         }
                       },
-                      "id": 11254,
+                      "id": 11408,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "withdraw",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 14696,
+                      "referencedDeclaration": 14850,
                       "src": "1849:16:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable) external"
                       }
                     },
-                    "id": 11256,
+                    "id": 11410,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1136,29 +1136,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11257,
+                  "id": 11411,
                   "nodeType": "ExpressionStatement",
                   "src": "1849:26:15"
                 }
               ]
             },
             "documentation": "@dev Investors can claim refunds here if crowdsale is unsuccessful.\n@param refundee Whose refund will be claimed.",
-            "id": 11259,
+            "id": 11413,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "claimRefund",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11237,
+              "id": 11391,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11236,
+                  "id": 11390,
                   "name": "refundee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11259,
+                  "scope": 11413,
                   "src": "1667:24:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1167,7 +1167,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 11235,
+                    "id": 11389,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1667:15:15",
@@ -1184,12 +1184,12 @@
               "src": "1666:26:15"
             },
             "returnParameters": {
-              "id": 11238,
+              "id": 11392,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1700:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1646:236:15",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1197,7 +1197,7 @@
           },
           {
             "body": {
-              "id": 11269,
+              "id": 11423,
               "nodeType": "Block",
               "src": "2055:44:15",
               "statements": [
@@ -1208,7 +1208,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11267,
+                    "id": 11421,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1218,18 +1218,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 11264,
+                        "id": 11418,
                         "name": "weiRaised",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10849,
+                        "referencedDeclaration": 11003,
                         "src": "2072:9:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
                           "typeString": "function () view returns (uint256)"
                         }
                       },
-                      "id": 11265,
+                      "id": 11419,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1247,11 +1247,11 @@
                     "operator": ">=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 11266,
+                      "id": 11420,
                       "name": "_goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11199,
+                      "referencedDeclaration": 11353,
                       "src": "2087:5:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1264,36 +1264,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 11263,
-                  "id": 11268,
+                  "functionReturnParameters": 11417,
+                  "id": 11422,
                   "nodeType": "Return",
                   "src": "2065:27:15"
                 }
               ]
             },
             "documentation": "@dev Checks whether funding goal was reached.\n@return Whether funding goal was reached",
-            "id": 11270,
+            "id": 11424,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "goalReached",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11260,
+              "id": 11414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2025:2:15"
             },
             "returnParameters": {
-              "id": 11263,
+              "id": 11417,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11262,
+                  "id": 11416,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11270,
+                  "scope": 11424,
                   "src": "2049:4:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1302,7 +1302,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 11261,
+                    "id": 11415,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2049:4:15",
@@ -1317,7 +1317,7 @@
               ],
               "src": "2048:6:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2005:94:15",
             "stateMutability": "view",
             "superFunction": null,
@@ -1325,7 +1325,7 @@
           },
           {
             "body": {
-              "id": 11298,
+              "id": 11452,
               "nodeType": "Block",
               "src": "2227:204:15",
               "statements": [
@@ -1335,18 +1335,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 11273,
+                      "id": 11427,
                       "name": "goalReached",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11270,
+                      "referencedDeclaration": 11424,
                       "src": "2241:11:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                         "typeString": "function () view returns (bool)"
                       }
                     },
-                    "id": 11274,
+                    "id": 11428,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1361,7 +1361,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 11291,
+                    "id": 11445,
                     "nodeType": "Block",
                     "src": "2345:48:15",
                     "statements": [
@@ -1373,32 +1373,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11286,
+                              "id": 11440,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2359:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11288,
+                            "id": 11442,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "enableRefunds",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14916,
+                            "referencedDeclaration": 15070,
                             "src": "2359:21:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11289,
+                          "id": 11443,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1412,17 +1412,17 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11290,
+                        "id": 11444,
                         "nodeType": "ExpressionStatement",
                         "src": "2359:23:15"
                       }
                     ]
                   },
-                  "id": 11292,
+                  "id": 11446,
                   "nodeType": "IfStatement",
                   "src": "2237:156:15",
                   "trueBody": {
-                    "id": 11285,
+                    "id": 11439,
                     "nodeType": "Block",
                     "src": "2256:83:15",
                     "statements": [
@@ -1434,32 +1434,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11275,
+                              "id": 11429,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2270:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11277,
+                            "id": 11431,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "close",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14894,
+                            "referencedDeclaration": 15048,
                             "src": "2270:13:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11278,
+                          "id": 11432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1473,7 +1473,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11279,
+                        "id": 11433,
                         "nodeType": "ExpressionStatement",
                         "src": "2270:15:15"
                       },
@@ -1485,32 +1485,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11280,
+                              "id": 11434,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2299:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11282,
+                            "id": 11436,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "beneficiaryWithdraw",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14937,
+                            "referencedDeclaration": 15091,
                             "src": "2299:27:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11283,
+                          "id": 11437,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1524,7 +1524,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11284,
+                        "id": 11438,
                         "nodeType": "ExpressionStatement",
                         "src": "2299:29:15"
                       }
@@ -1539,32 +1539,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11293,
+                        "id": 11447,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19054,
+                        "referencedDeclaration": 19210,
                         "src": "2403:5:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_RefundableCrowdsale_$11316",
+                          "typeIdentifier": "t_super$_RefundableCrowdsale_$11470",
                           "typeString": "contract super RefundableCrowdsale"
                         }
                       },
-                      "id": 11295,
+                      "id": 11449,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_finalization",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11058,
+                      "referencedDeclaration": 11212,
                       "src": "2403:19:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 11296,
+                    "id": 11450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1578,40 +1578,40 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11297,
+                  "id": 11451,
                   "nodeType": "ExpressionStatement",
                   "src": "2403:21:15"
                 }
               ]
             },
             "documentation": "@dev Escrow finalization task, called when finalize() is called.",
-            "id": 11299,
+            "id": 11453,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_finalization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11271,
+              "id": 11425,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2215:2:15"
             },
             "returnParameters": {
-              "id": 11272,
+              "id": 11426,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2227:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2193:238:15",
             "stateMutability": "nonpayable",
-            "superFunction": 11058,
+            "superFunction": 11212,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 11314,
+              "id": 11468,
               "nodeType": "Block",
               "src": "2561:61:15",
               "statements": [
@@ -1623,18 +1623,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 11310,
+                          "id": 11464,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 18954,
+                          "referencedDeclaration": 19108,
                           "src": "2604:3:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 11311,
+                        "id": 11465,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1661,18 +1661,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 11307,
+                            "id": 11461,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18954,
+                            "referencedDeclaration": 19108,
                             "src": "2593:3:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 11308,
+                          "id": 11462,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1698,32 +1698,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 11302,
+                            "id": 11456,
                             "name": "_escrow",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11201,
+                            "referencedDeclaration": 11355,
                             "src": "2571:7:15",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                              "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                               "typeString": "contract RefundEscrow"
                             }
                           },
-                          "id": 11305,
+                          "id": 11459,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "deposit",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 14872,
+                          "referencedDeclaration": 15026,
                           "src": "2571:15:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_address_$returns$__$",
                             "typeString": "function (address) payable external"
                           }
                         },
-                        "id": 11306,
+                        "id": 11460,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1737,7 +1737,7 @@
                           "typeString": "function (uint256) returns (function (address) payable external)"
                         }
                       },
-                      "id": 11309,
+                      "id": 11463,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1751,7 +1751,7 @@
                         "typeString": "function (address) payable external"
                       }
                     },
-                    "id": 11312,
+                    "id": 11466,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1765,39 +1765,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11313,
+                  "id": 11467,
                   "nodeType": "ExpressionStatement",
                   "src": "2571:44:15"
                 }
               ]
             },
             "documentation": "@dev Overrides Crowdsale fund forwarding, sending funds to escrow.",
-            "id": 11315,
+            "id": 11469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_forwardFunds",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11300,
+              "id": 11454,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2549:2:15"
             },
             "returnParameters": {
-              "id": 11301,
+              "id": 11455,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2561:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2527:95:15",
             "stateMutability": "nonpayable",
-            "superFunction": 10998,
+            "superFunction": 11152,
             "visibility": "internal"
           }
         ],
-        "scope": 11317,
+        "scope": 11471,
         "src": "800:1824:15"
       }
     ],
@@ -1807,14 +1807,14 @@
     "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/RefundableCrowdsale.sol",
     "exportedSymbols": {
       "RefundableCrowdsale": [
-        11316
+        11470
       ]
     },
-    "id": 11317,
+    "id": 11471,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11189,
+        "id": 11343,
         "literals": [
           "solidity",
           "^",
@@ -1827,10 +1827,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol",
         "file": "../../math/SafeMath.sol",
-        "id": 11190,
+        "id": 11344,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 14142,
+        "scope": 11471,
+        "sourceUnit": 14296,
         "src": "25:33:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1838,10 +1838,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/crowdsale/distribution/FinalizableCrowdsale.sol",
         "file": "./FinalizableCrowdsale.sol",
-        "id": 11191,
+        "id": 11345,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 11060,
+        "scope": 11471,
+        "sourceUnit": 11214,
         "src": "59:36:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1849,10 +1849,10 @@
       {
         "absolutePath": "/Users/hong/OneDrive - shanghaitech.edu.cn/projects/blockchainND/capstone/git/RealEstateMarketplace/eth-contracts/contracts/openzeppelin-solidity/contracts/payment/escrow/RefundEscrow.sol",
         "file": "../../payment/escrow/RefundEscrow.sol",
-        "id": 11192,
+        "id": 11346,
         "nodeType": "ImportDirective",
-        "scope": 11317,
-        "sourceUnit": 14952,
+        "scope": 11471,
+        "sourceUnit": 15106,
         "src": "96:47:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1863,60 +1863,60 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11193,
+              "id": 11347,
               "name": "FinalizableCrowdsale",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11059,
+              "referencedDeclaration": 11213,
               "src": "832:20:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FinalizableCrowdsale_$11059",
+                "typeIdentifier": "t_contract$_FinalizableCrowdsale_$11213",
                 "typeString": "contract FinalizableCrowdsale"
               }
             },
-            "id": 11194,
+            "id": 11348,
             "nodeType": "InheritanceSpecifier",
             "src": "832:20:15"
           }
         ],
         "contractDependencies": [
-          10999,
-          11059,
-          11964,
-          14951,
-          18722
+          11153,
+          11213,
+          12118,
+          15105,
+          18876
         ],
         "contractKind": "contract",
         "documentation": "@title RefundableCrowdsale\n@dev Extension of `FinalizableCrowdsale` contract that adds a funding goal, and the possibility of users\ngetting a refund if goal is not met.\n * Deprecated, use `RefundablePostDeliveryCrowdsale` instead. Note that if you allow tokens to be traded before the goal\nis met, then an attack is possible in which the attacker purchases tokens from the crowdsale and when they sees that\nthe goal is unlikely to be met, they sell their tokens (possibly at a discount). The attacker will be refunded when\nthe crowdsale is finalized, and the users that purchased from them will be left with worthless tokens.",
         "fullyImplemented": false,
-        "id": 11316,
+        "id": 11470,
         "linearizedBaseContracts": [
-          11316,
-          11059,
-          11964,
-          10999,
-          18722
+          11470,
+          11213,
+          12118,
+          11153,
+          18876
         ],
         "name": "RefundableCrowdsale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 11197,
+            "id": 11351,
             "libraryName": {
               "contractScope": null,
-              "id": 11195,
+              "id": 11349,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 14141,
+              "referencedDeclaration": 14295,
               "src": "865:8:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$14141",
+                "typeIdentifier": "t_contract$_SafeMath_$14295",
                 "typeString": "library SafeMath"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "859:27:15",
             "typeName": {
-              "id": 11196,
+              "id": 11350,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "878:7:15",
@@ -1928,10 +1928,10 @@
           },
           {
             "constant": false,
-            "id": 11199,
+            "id": 11353,
             "name": "_goal",
             "nodeType": "VariableDeclaration",
-            "scope": 11316,
+            "scope": 11470,
             "src": "944:21:15",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1940,7 +1940,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11198,
+              "id": 11352,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "944:7:15",
@@ -1954,26 +1954,26 @@
           },
           {
             "constant": false,
-            "id": 11201,
+            "id": 11355,
             "name": "_escrow",
             "nodeType": "VariableDeclaration",
-            "scope": 11316,
+            "scope": 11470,
             "src": "1039:28:15",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+              "typeIdentifier": "t_contract$_RefundEscrow_$15105",
               "typeString": "contract RefundEscrow"
             },
             "typeName": {
               "contractScope": null,
-              "id": 11200,
+              "id": 11354,
               "name": "RefundEscrow",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 14951,
+              "referencedDeclaration": 15105,
               "src": "1039:12:15",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                 "typeString": "contract RefundEscrow"
               }
             },
@@ -1982,7 +1982,7 @@
           },
           {
             "body": {
-              "id": 11225,
+              "id": 11379,
               "nodeType": "Block",
               "src": "1203:136:15",
               "statements": [
@@ -1996,18 +1996,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 11209,
+                        "id": 11363,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 11207,
+                          "id": 11361,
                           "name": "goal",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11203,
+                          "referencedDeclaration": 11357,
                           "src": "1221:4:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2019,7 +2019,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 11208,
+                          "id": 11362,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2043,7 +2043,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a20676f616c2069732030",
-                        "id": 11210,
+                        "id": 11364,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2070,21 +2070,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: goal is 0\""
                         }
                       ],
-                      "id": 11206,
+                      "id": 11360,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1213:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11211,
+                    "id": 11365,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2098,28 +2098,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11212,
+                  "id": 11366,
                   "nodeType": "ExpressionStatement",
                   "src": "1213:51:15"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11219,
+                    "id": 11373,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11213,
+                      "id": 11367,
                       "name": "_escrow",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11201,
+                      "referencedDeclaration": 11355,
                       "src": "1274:7:15",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                        "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                         "typeString": "contract RefundEscrow"
                       }
                     },
@@ -2133,18 +2133,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11216,
+                            "id": 11370,
                             "name": "wallet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10833,
+                            "referencedDeclaration": 10987,
                             "src": "1301:6:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
                               "typeString": "function () view returns (address payable)"
                             }
                           },
-                          "id": 11217,
+                          "id": 11371,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2166,7 +2166,7 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 11215,
+                        "id": 11369,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2174,23 +2174,23 @@
                         "nodeType": "NewExpression",
                         "src": "1284:16:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_payable_$returns$_t_contract$_RefundEscrow_$14951_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_payable_$returns$_t_contract$_RefundEscrow_$15105_$",
                           "typeString": "function (address payable) returns (contract RefundEscrow)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 11214,
+                          "id": 11368,
                           "name": "RefundEscrow",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 14951,
+                          "referencedDeclaration": 15105,
                           "src": "1288:12:15",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                            "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                             "typeString": "contract RefundEscrow"
                           }
                         }
                       },
-                      "id": 11218,
+                      "id": 11372,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2200,35 +2200,35 @@
                       "nodeType": "FunctionCall",
                       "src": "1284:26:15",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                        "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                         "typeString": "contract RefundEscrow"
                       }
                     },
                     "src": "1274:36:15",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                      "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                       "typeString": "contract RefundEscrow"
                     }
                   },
-                  "id": 11220,
+                  "id": 11374,
                   "nodeType": "ExpressionStatement",
                   "src": "1274:36:15"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11223,
+                    "id": 11377,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11221,
+                      "id": 11375,
                       "name": "_goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11199,
+                      "referencedDeclaration": 11353,
                       "src": "1320:5:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2239,11 +2239,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11222,
+                      "id": 11376,
                       "name": "goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11203,
+                      "referencedDeclaration": 11357,
                       "src": "1328:4:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2256,29 +2256,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 11224,
+                  "id": 11378,
                   "nodeType": "ExpressionStatement",
                   "src": "1320:12:15"
                 }
               ]
             },
             "documentation": "@dev Constructor, creates RefundEscrow.\n@param goal Funding goal",
-            "id": 11226,
+            "id": 11380,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11204,
+              "id": 11358,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11203,
+                  "id": 11357,
                   "name": "goal",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11226,
+                  "scope": 11380,
                   "src": "1182:12:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2287,7 +2287,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11202,
+                    "id": 11356,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1182:7:15",
@@ -2303,12 +2303,12 @@
               "src": "1181:14:15"
             },
             "returnParameters": {
-              "id": 11205,
+              "id": 11359,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1203:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1169:170:15",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2316,54 +2316,54 @@
           },
           {
             "body": {
-              "id": 11233,
+              "id": 11387,
               "nodeType": "Block",
               "src": "1467:29:15",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11231,
+                    "id": 11385,
                     "name": "_goal",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11199,
+                    "referencedDeclaration": 11353,
                     "src": "1484:5:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 11230,
-                  "id": 11232,
+                  "functionReturnParameters": 11384,
+                  "id": 11386,
                   "nodeType": "Return",
                   "src": "1477:12:15"
                 }
               ]
             },
             "documentation": "@return minimum amount of funds to be raised in wei.",
-            "id": 11234,
+            "id": 11388,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "goal",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11227,
+              "id": 11381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1434:2:15"
             },
             "returnParameters": {
-              "id": 11230,
+              "id": 11384,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11229,
+                  "id": 11383,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11234,
+                  "scope": 11388,
                   "src": "1458:7:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2372,7 +2372,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11228,
+                    "id": 11382,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1458:7:15",
@@ -2387,7 +2387,7 @@
               ],
               "src": "1457:9:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1421:75:15",
             "stateMutability": "view",
             "superFunction": null,
@@ -2395,7 +2395,7 @@
           },
           {
             "body": {
-              "id": 11258,
+              "id": 11412,
               "nodeType": "Block",
               "src": "1700:182:15",
               "statements": [
@@ -2408,18 +2408,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 11240,
+                          "id": 11394,
                           "name": "finalized",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11028,
+                          "referencedDeclaration": 11182,
                           "src": "1718:9:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 11241,
+                        "id": 11395,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2436,7 +2436,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a206e6f742066696e616c697a6564",
-                        "id": 11242,
+                        "id": 11396,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2463,21 +2463,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: not finalized\""
                         }
                       ],
-                      "id": 11239,
+                      "id": 11393,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1710:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11243,
+                    "id": 11397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2491,7 +2491,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11244,
+                  "id": 11398,
                   "nodeType": "ExpressionStatement",
                   "src": "1710:58:15"
                 },
@@ -2501,7 +2501,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11248,
+                        "id": 11402,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2515,18 +2515,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11246,
+                            "id": 11400,
                             "name": "goalReached",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11270,
+                            "referencedDeclaration": 11424,
                             "src": "1787:11:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                               "typeString": "function () view returns (bool)"
                             }
                           },
-                          "id": 11247,
+                          "id": 11401,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2548,7 +2548,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526566756e6461626c6543726f776473616c653a20676f616c2072656163686564",
-                        "id": 11249,
+                        "id": 11403,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2575,21 +2575,21 @@
                           "typeString": "literal_string \"RefundableCrowdsale: goal reached\""
                         }
                       ],
-                      "id": 11245,
+                      "id": 11399,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        18957,
-                        18958
+                        19111,
+                        19112
                       ],
-                      "referencedDeclaration": 18958,
+                      "referencedDeclaration": 19112,
                       "src": "1778:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11250,
+                    "id": 11404,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2603,7 +2603,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11251,
+                  "id": 11405,
                   "nodeType": "ExpressionStatement",
                   "src": "1778:60:15"
                 },
@@ -2613,11 +2613,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11255,
+                        "id": 11409,
                         "name": "refundee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11236,
+                        "referencedDeclaration": 11390,
                         "src": "1866:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
@@ -2634,32 +2634,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11252,
+                        "id": 11406,
                         "name": "_escrow",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11201,
+                        "referencedDeclaration": 11355,
                         "src": "1849:7:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                          "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                           "typeString": "contract RefundEscrow"
                         }
                       },
-                      "id": 11254,
+                      "id": 11408,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "withdraw",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 14696,
+                      "referencedDeclaration": 14850,
                       "src": "1849:16:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable) external"
                       }
                     },
-                    "id": 11256,
+                    "id": 11410,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2673,29 +2673,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11257,
+                  "id": 11411,
                   "nodeType": "ExpressionStatement",
                   "src": "1849:26:15"
                 }
               ]
             },
             "documentation": "@dev Investors can claim refunds here if crowdsale is unsuccessful.\n@param refundee Whose refund will be claimed.",
-            "id": 11259,
+            "id": 11413,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "claimRefund",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11237,
+              "id": 11391,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11236,
+                  "id": 11390,
                   "name": "refundee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11259,
+                  "scope": 11413,
                   "src": "1667:24:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2704,7 +2704,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 11235,
+                    "id": 11389,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1667:15:15",
@@ -2721,12 +2721,12 @@
               "src": "1666:26:15"
             },
             "returnParameters": {
-              "id": 11238,
+              "id": 11392,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1700:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "1646:236:15",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2734,7 +2734,7 @@
           },
           {
             "body": {
-              "id": 11269,
+              "id": 11423,
               "nodeType": "Block",
               "src": "2055:44:15",
               "statements": [
@@ -2745,7 +2745,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11267,
+                    "id": 11421,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2755,18 +2755,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 11264,
+                        "id": 11418,
                         "name": "weiRaised",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10849,
+                        "referencedDeclaration": 11003,
                         "src": "2072:9:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
                           "typeString": "function () view returns (uint256)"
                         }
                       },
-                      "id": 11265,
+                      "id": 11419,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2784,11 +2784,11 @@
                     "operator": ">=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 11266,
+                      "id": 11420,
                       "name": "_goal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11199,
+                      "referencedDeclaration": 11353,
                       "src": "2087:5:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2801,36 +2801,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 11263,
-                  "id": 11268,
+                  "functionReturnParameters": 11417,
+                  "id": 11422,
                   "nodeType": "Return",
                   "src": "2065:27:15"
                 }
               ]
             },
             "documentation": "@dev Checks whether funding goal was reached.\n@return Whether funding goal was reached",
-            "id": 11270,
+            "id": 11424,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "goalReached",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11260,
+              "id": 11414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2025:2:15"
             },
             "returnParameters": {
-              "id": 11263,
+              "id": 11417,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11262,
+                  "id": 11416,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11270,
+                  "scope": 11424,
                   "src": "2049:4:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2839,7 +2839,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 11261,
+                    "id": 11415,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2049:4:15",
@@ -2854,7 +2854,7 @@
               ],
               "src": "2048:6:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2005:94:15",
             "stateMutability": "view",
             "superFunction": null,
@@ -2862,7 +2862,7 @@
           },
           {
             "body": {
-              "id": 11298,
+              "id": 11452,
               "nodeType": "Block",
               "src": "2227:204:15",
               "statements": [
@@ -2872,18 +2872,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 11273,
+                      "id": 11427,
                       "name": "goalReached",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11270,
+                      "referencedDeclaration": 11424,
                       "src": "2241:11:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                         "typeString": "function () view returns (bool)"
                       }
                     },
-                    "id": 11274,
+                    "id": 11428,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2898,7 +2898,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 11291,
+                    "id": 11445,
                     "nodeType": "Block",
                     "src": "2345:48:15",
                     "statements": [
@@ -2910,32 +2910,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11286,
+                              "id": 11440,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2359:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11288,
+                            "id": 11442,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "enableRefunds",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14916,
+                            "referencedDeclaration": 15070,
                             "src": "2359:21:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11289,
+                          "id": 11443,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2949,17 +2949,17 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11290,
+                        "id": 11444,
                         "nodeType": "ExpressionStatement",
                         "src": "2359:23:15"
                       }
                     ]
                   },
-                  "id": 11292,
+                  "id": 11446,
                   "nodeType": "IfStatement",
                   "src": "2237:156:15",
                   "trueBody": {
-                    "id": 11285,
+                    "id": 11439,
                     "nodeType": "Block",
                     "src": "2256:83:15",
                     "statements": [
@@ -2971,32 +2971,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11275,
+                              "id": 11429,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2270:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11277,
+                            "id": 11431,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "close",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14894,
+                            "referencedDeclaration": 15048,
                             "src": "2270:13:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11278,
+                          "id": 11432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3010,7 +3010,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11279,
+                        "id": 11433,
                         "nodeType": "ExpressionStatement",
                         "src": "2270:15:15"
                       },
@@ -3022,32 +3022,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 11280,
+                              "id": 11434,
                               "name": "_escrow",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11201,
+                              "referencedDeclaration": 11355,
                               "src": "2299:7:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                                "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                                 "typeString": "contract RefundEscrow"
                               }
                             },
-                            "id": 11282,
+                            "id": 11436,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "beneficiaryWithdraw",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 14937,
+                            "referencedDeclaration": 15091,
                             "src": "2299:27:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 11283,
+                          "id": 11437,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3061,7 +3061,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11284,
+                        "id": 11438,
                         "nodeType": "ExpressionStatement",
                         "src": "2299:29:15"
                       }
@@ -3076,32 +3076,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11293,
+                        "id": 11447,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 19054,
+                        "referencedDeclaration": 19210,
                         "src": "2403:5:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_RefundableCrowdsale_$11316",
+                          "typeIdentifier": "t_super$_RefundableCrowdsale_$11470",
                           "typeString": "contract super RefundableCrowdsale"
                         }
                       },
-                      "id": 11295,
+                      "id": 11449,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_finalization",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11058,
+                      "referencedDeclaration": 11212,
                       "src": "2403:19:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 11296,
+                    "id": 11450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3115,40 +3115,40 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11297,
+                  "id": 11451,
                   "nodeType": "ExpressionStatement",
                   "src": "2403:21:15"
                 }
               ]
             },
             "documentation": "@dev Escrow finalization task, called when finalize() is called.",
-            "id": 11299,
+            "id": 11453,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_finalization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11271,
+              "id": 11425,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2215:2:15"
             },
             "returnParameters": {
-              "id": 11272,
+              "id": 11426,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2227:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2193:238:15",
             "stateMutability": "nonpayable",
-            "superFunction": 11058,
+            "superFunction": 11212,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 11314,
+              "id": 11468,
               "nodeType": "Block",
               "src": "2561:61:15",
               "statements": [
@@ -3160,18 +3160,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 11310,
+                          "id": 11464,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 18954,
+                          "referencedDeclaration": 19108,
                           "src": "2604:3:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 11311,
+                        "id": 11465,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3198,18 +3198,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 11307,
+                            "id": 11461,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 18954,
+                            "referencedDeclaration": 19108,
                             "src": "2593:3:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 11308,
+                          "id": 11462,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3235,32 +3235,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 11302,
+                            "id": 11456,
                             "name": "_escrow",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11201,
+                            "referencedDeclaration": 11355,
                             "src": "2571:7:15",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_RefundEscrow_$14951",
+                              "typeIdentifier": "t_contract$_RefundEscrow_$15105",
                               "typeString": "contract RefundEscrow"
                             }
                           },
-                          "id": 11305,
+                          "id": 11459,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "deposit",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 14872,
+                          "referencedDeclaration": 15026,
                           "src": "2571:15:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_address_$returns$__$",
                             "typeString": "function (address) payable external"
                           }
                         },
-                        "id": 11306,
+                        "id": 11460,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3274,7 +3274,7 @@
                           "typeString": "function (uint256) returns (function (address) payable external)"
                         }
                       },
-                      "id": 11309,
+                      "id": 11463,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3288,7 +3288,7 @@
                         "typeString": "function (address) payable external"
                       }
                     },
-                    "id": 11312,
+                    "id": 11466,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3302,39 +3302,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11313,
+                  "id": 11467,
                   "nodeType": "ExpressionStatement",
                   "src": "2571:44:15"
                 }
               ]
             },
             "documentation": "@dev Overrides Crowdsale fund forwarding, sending funds to escrow.",
-            "id": 11315,
+            "id": 11469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_forwardFunds",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11300,
+              "id": 11454,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2549:2:15"
             },
             "returnParameters": {
-              "id": 11301,
+              "id": 11455,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2561:0:15"
             },
-            "scope": 11316,
+            "scope": 11470,
             "src": "2527:95:15",
             "stateMutability": "nonpayable",
-            "superFunction": 10998,
+            "superFunction": 11152,
             "visibility": "internal"
           }
         ],
-        "scope": 11317,
+        "scope": 11471,
         "src": "800:1824:15"
       }
     ],
@@ -3346,7 +3346,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-18T13:12:19.508Z",
+  "updatedAt": "2019-08-19T08:29:08.913Z",
   "devdoc": {
     "details": "Extension of `FinalizableCrowdsale` contract that adds a funding goal, and the possibility of users getting a refund if goal is not met. * Deprecated, use `RefundablePostDeliveryCrowdsale` instead. Note that if you allow tokens to be traded before the goal is met, then an attack is possible in which the attacker purchases tokens from the crowdsale and when they sees that the goal is unlikely to be met, they sell their tokens (possibly at a discount). The attacker will be refunded when the crowdsale is finalized, and the users that purchased from them will be left with worthless tokens.",
     "methods": {
