@@ -4793,7 +4793,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:08.593Z",
+  "updatedAt": "2019-08-20T13:13:33.123Z",
   "devdoc": {
     "methods": {
       "isApprovedForAll(address,address)": {

@@ -3307,7 +3307,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:08.907Z",
+  "updatedAt": "2019-08-20T13:13:33.156Z",
   "devdoc": {
     "details": "Similar to an Escrow for tokens, this contract allows its primary account to spend its tokens as it sees fit. This contract is an internal helper for PostDeliveryCrowdsale, and should not be used outside of this context.",
     "methods": {

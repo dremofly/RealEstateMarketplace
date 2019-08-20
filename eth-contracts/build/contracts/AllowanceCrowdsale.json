@@ -2342,7 +2342,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:08.945Z",
+  "updatedAt": "2019-08-20T13:13:33.167Z",
   "devdoc": {
     "details": "Extension of Crowdsale where tokens are held by a wallet, which approves an allowance to the crowdsale.",
     "methods": {

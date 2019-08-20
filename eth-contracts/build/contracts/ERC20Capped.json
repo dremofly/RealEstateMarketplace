@@ -1870,7 +1870,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:09.293Z",
+  "updatedAt": "2019-08-20T13:13:33.295Z",
   "devdoc": {
     "details": "Extension of `ERC20Mintable` that adds a cap to the supply of tokens.",
     "methods": {

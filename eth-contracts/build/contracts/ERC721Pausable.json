@@ -1886,7 +1886,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:09.374Z",
+  "updatedAt": "2019-08-20T13:13:33.340Z",
   "devdoc": {
     "details": "ERC721 modified with pausable transfers.",
     "methods": {

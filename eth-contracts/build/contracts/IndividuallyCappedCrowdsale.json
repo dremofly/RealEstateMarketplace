@@ -3039,7 +3039,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:09.027Z",
+  "updatedAt": "2019-08-20T13:13:33.182Z",
   "devdoc": {
     "details": "Crowdsale with per-beneficiary caps.",
     "methods": {
