@@ -4,6 +4,8 @@
 
 This project is building a real estate marketing dapp based on etherum. The real estates are tokenized into ERC721. The front end client is generated using [OpenSea](https://docs.opensea.io/docs), which is a decentralized marketplace used for selling crypto assets. 
 
+Besides this project uses zokrates to implement zero proof knowledge. The related code is in the directory `zokrates`. 
+
 The contract is deployed in rinkeby testnet. 
 
 The contract address is 
