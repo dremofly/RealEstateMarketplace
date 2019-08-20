@@ -12,14 +12,11 @@ The contract address is
 ```
 
 The example account is 
-```
-https://rinkeby.opensea.io/accounts/0xaf2fbec164115c9664e21e4dca7702b880f99594
-```
+
+[https://rinkeby.opensea.io/accounts/0xaf2fbec164115c9664e21e4dca7702b880f99594](https://rinkeby.opensea.io/accounts/0xaf2fbec164115c9664e21e4dca7702b880f99594)
 
 The account that bought the assets is 
-```
-https://rinkeby.opensea.io/accounts/0x155ffa491f43e13cc20fea37d4a412696b962ca5
-```
+[https://rinkeby.opensea.io/accounts/0x155ffa491f43e13cc20fea37d4a412696b962ca5](https://rinkeby.opensea.io/accounts/0x155ffa491f43e13cc20fea37d4a412696b962ca5)
 
 ## Compile and migrate the contract
 Go to the `eth-contracts` directory
