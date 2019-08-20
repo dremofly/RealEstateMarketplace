@@ -37,4 +37,4 @@ truffle test
 ```
 
 ## Demo
-![demo](./demo/demo/jpg)
+![demo](./demo/demo.jpg)
