@@ -19,7 +19,7 @@ contract SolnSquareVerifier is HongToken {
 
 
 // TODO define an array of the above struct
-    solutions[] sols;
+    solutions[] public sols;
 
 // TODO define a mapping to store unique solutions submitted
     mapping(bytes32 => solutions) private submitted;
@@ -50,7 +50,7 @@ contract SolnSquareVerifier is HongToken {
     }
 
     function isDuplicated(bytes32 key) internal returns(bool) {
-        if(submitted[key].ad != address(0)) 
+        if(submitted[key].ad == address(0)) 
             return false;
         else 
             return true;

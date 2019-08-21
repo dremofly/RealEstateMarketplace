@@ -3459,7 +3459,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-20T13:13:33.148Z",
+  "updatedAt": "2019-08-21T01:55:52.367Z",
   "devdoc": {
     "details": "Crowdsale that locks tokens from withdrawal until it ends.",
     "methods": {

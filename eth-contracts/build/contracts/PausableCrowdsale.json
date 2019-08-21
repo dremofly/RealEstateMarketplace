@@ -847,7 +847,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-20T13:13:33.184Z",
+  "updatedAt": "2019-08-21T01:55:52.388Z",
   "devdoc": {
     "details": "Extension of Crowdsale contract where purchases can be paused and unpaused by the pauser role.",
     "methods": {

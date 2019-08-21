@@ -1055,7 +1055,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-20T13:13:33.336Z",
+  "updatedAt": "2019-08-21T01:55:52.544Z",
   "devdoc": {
     "details": "ERC721 minting logic.",
     "methods": {

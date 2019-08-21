@@ -1,0 +1,7 @@
+var fs = require('fs')
+var path = require('path')
+var filename = path.join(__dirname + '/eth-contracts/build/contracts/SolnSquareVerifier.json')
+//var filename = path.join(__dirname + '/SolnSquareVerifier_abi.json')
+var file = fs.readFileSync(filename)
+var data = JSON.parse(file)
+console.log(data['abi'])

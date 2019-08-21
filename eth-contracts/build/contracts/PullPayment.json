@@ -1434,7 +1434,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-20T13:13:33.256Z",
+  "updatedAt": "2019-08-21T01:55:52.447Z",
   "devdoc": {
     "details": "Base contract supporting async send for pull payments. Inherit from this contract and use _asyncTransfer instead of send or transfer.",
     "methods": {

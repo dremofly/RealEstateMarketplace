@@ -3656,7 +3656,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-08-19T08:29:09.231Z",
+  "updatedAt": "2019-08-21T01:55:52.425Z",
   "devdoc": {
     "details": "Library used to query support of an interface declared via `IERC165`. * Note that these functions return the actual result of the query: they do not `revert` if an interface is not supported. It is up to the caller to decide what to do in these cases.",
     "methods": {}
