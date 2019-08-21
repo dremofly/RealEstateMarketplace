@@ -20,6 +20,8 @@ The example account is
 The account that bought the assets is 
 [https://rinkeby.opensea.io/accounts/0x155ffa491f43e13cc20fea37d4a412696b962ca5](https://rinkeby.opensea.io/accounts/0x155ffa491f43e13cc20fea37d4a412696b962ca5)
 
+The abi of `SolnSquareVerifier.sol` can be seen in the [JSON file](SolnSquareVerifier_abi.json). 
+
 ## Compile and migrate the contract
 Go to the `eth-contracts` directory
 ```shell
