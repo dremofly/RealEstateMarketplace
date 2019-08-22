@@ -10,7 +10,6 @@ contract('TestERC721Mintable', accounts => {
         beforeEach(async function () { 
             this.contract = await HongToken.new({from: account_one});  // an instance
 
-            // TODO: mint multiple tokens
             for(let i=0; i<5; i++) {
                 await this.contract.mint(account_one, i, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/");
             }
